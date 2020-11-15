@@ -11,7 +11,7 @@ module.exports = async (bot, message) => {
   if (responseObject[message.content]) {
     message.channel.send(responseObject[message.content]);
   }
-
+let prefix = config.prefix;
   if (
     message.content === "<@705547264537657465>" ||
     message.content === "<@!705547264537657465>"
@@ -28,14 +28,10 @@ module.exports = async (bot, message) => {
     message.channel.send(embed);
   }
 
-  let prefix = config.prefix;
-  const args = message.content
-    .slice(prefix)
-    .trim()
-    .split(/ +/g);
+  var args = message.content.substring(config.prefix.length).split(" ");
+  if (!message.content.startsWith(config.prefix)) return;
   let cmd = args.shift().toLowerCase();
   if (!message.content.startsWith(prefix) || message.author.bot) return;
-
   let command = bot.commands.get(cmd) || bot.commands.get(bot.aliases.get(cmd));
   if (command) {
     command.run(bot, message, args);
@@ -43,4 +39,5 @@ module.exports = async (bot, message) => {
     message.reply(`não reconheci esse comando 😣`);
   }
 };
+
 // if (!message.content.startsWith(config.prefix)) return;
