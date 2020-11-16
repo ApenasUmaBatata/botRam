@@ -64,7 +64,7 @@ module.exports = {
           if (reaction.emoji.name === "🏹") {
             // Agora, caso o usuário clique no outro emoji, referente à Designer
             message.reply("Você adquiriu o emprego *Armeiro*");
-            db.add(`trabaio_${message.author.id}`, 3); // iremos adicionar 2 (dois) na DB, que iremos definir como Designer
+            db.add(`trabaio_${message.author.id}`, 4); // iremos adicionar 2 (dois) na DB, que iremos definir como Designer
           }
         })
         .catch(collected => {
