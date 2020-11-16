@@ -54,7 +54,7 @@ module.exports = {
         `${moment(bot.user.createdAt).format("LLLL")}!`
       )
       .addField("__**Atualmente tenho**__", `${bot.commands.size} comandos`)
-      .addField("__**Estou acordada há**__", `${uptime}`)
+      .addField("__**Estou acordada à**__", `${uptime}`)
       .addField(
         `__**Vote em mim**__`,
         `[Top.gg](https://top.gg/bot/705547264537657465)`
