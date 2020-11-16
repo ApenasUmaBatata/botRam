@@ -30,6 +30,9 @@ module.exports = {
         title: `Um Anão acabou de roubar as mensagens!`,
         description: `Ele levou um total de \`${clean}\` mensagens.`,
         color: `RANDOM`,
+        image: {
+          url: "http://49.media.tumblr.com/tumblr_lpa3tsw0gt1qhq9wyo4_r1_500.gif"
+        },
         footer: {
           text: `Responsável: ${message.author.username}`
         }
