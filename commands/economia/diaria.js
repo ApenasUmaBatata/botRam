@@ -1,5 +1,5 @@
 const db = require("quick.db"); // Puxando a nossa Database *Instale utilizando: npm i quick.db --save
-const ms = require("parse-ms"); // Uma npm para definir o tempo (Para instalar: npm i parse-ms)
+const ms = require("ms"); // Uma npm para definir o tempo (Para instalar: npm i parse-ms)
 const Discord = require("discord.js"); // puxando a livraria Discord.js
 
 module.exports = {
