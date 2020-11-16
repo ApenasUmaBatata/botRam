@@ -2,7 +2,7 @@ const Discord = require("discord.js");
 module.exports = {
   config: {
   name: "userinfo",
-  aliases: ["membroinfo", "memberinfo", "user"]
+  aliases: ["membroinfo", "memberinfo", "user", "usuario"]
   },
 run: async (bot, message, args) => {
   await message.react("✅");

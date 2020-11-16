@@ -2,7 +2,7 @@ const Discord = require("discord.js");
 module.exports = {
   config: {
     name: "svinfo",
-    aliases: ["serverinfo"]
+    aliases: ["serverinfo", "servidor"]
   },
   run: async (bot, message, args) => {
     await message.react("✅");

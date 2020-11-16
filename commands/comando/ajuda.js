@@ -7,7 +7,7 @@ module.exports = {
   run: async (bot, message, args) => {
     await message.react("✅"); // setando a base
     // avisando sobre a embed de ajuda na DM
-    const prefix = require("../../config.json");
+    const prefi = `Ram `;
     let inline = true;
     let embed = new Discord.MessageEmbed()
       .setTitle(`Eu escutei por um pedido de ajuda?`)
@@ -42,42 +42,25 @@ module.exports = {
       Comandos.on("collect", r2 => {
         // criando um evento, caso o membro clique nessa reação, e todos são iguais!
         embed = new Discord.MessageEmbed()
-          .setTitle(`💠|Comandos | Prefixo = ${prefix}`)
-          .addField(`\`ajuda\``, `Mostra os comandos disponíveis!`, inline)
+          .setTitle(`💠|Comandos | Prefixo = ${prefi}`)
           .addField(`\`botinfo\``, `Mostra as informações sobre o bot!`, inline)
           .addField(
-            `\`svinfo\``,
+            `\`servidor\``,
             `Mostra as informações sobre o servidor!`,
             inline
           )
           .addField(
-            `\`user\``,
+            `\`usuario\``,
             `Mostra as informações de um membro (marque alguem)!`,
             inline
           )
-          .addField(`\`ping\``, `Mostra a conexão com o servidor!`, inline)
           .addField(`\`sorteio\``, `Faz um sorteio no servidor!`, inline)
-          .addField(
-            `\`sugestão\``,
-            `Envie uma sugestão para o SrBatata#5199 adicionar no bot!`,
-            inline
-          )
-          .addField(
-            `\`bug\``,
-            `Envie um problema encontrado no bot para o SrBatata#5199!`,
-            inline
-          )
-          .addField(
-            `\`painel\``,
-            `Mostra as configurações ativas no servidor!`,
-            inline
-          )
           .setColor("RANDOM");
         msg.edit(embed);
       });
       Administração.on("collect", r2 => {
         embed = new Discord.MessageEmbed()
-          .setTitle(`🔅|Administração | Prefixo = ${prefix}`)
+          .setTitle(`🔅|Administração | Prefixo = ${prefi}`)
           .addField(`\`limpar\``, `Limpa uma quantidade de mensagens!`, inline)
           .addField(`\`kick\``, `Expulsa um membro do grupo!`, inline)
           .addField(`\`Enquete\``, `Cria uma enquete no grupo!`, inline)
@@ -87,7 +70,7 @@ module.exports = {
       });
       Entretenimento.on("collect", r2 => {
         embed = new Discord.MessageEmbed()
-          .setTitle(`🌀|Entretenimento | Prefixo = ${prefix}`)
+          .setTitle(`🌀|Entretenimento | Prefixo = ${prefi}`)
           .addField(`\`d6\``, `Rode o dado de 6 lados!`, inline)
           .addField(`\`d20\``, `Rode o dado de 20 lados!`, inline)
           .addField(`\`flip\``, `Jogue a moeda para cima!`, inline)
@@ -117,7 +100,7 @@ module.exports = {
       Back.on("collect", r2 => {
         embed = new Discord.MessageEmbed()
           .setTitle(`Eu escutei por um pedido de ajuda?`)
-          .setColor("RANDOM")
+          .setColor("RED")
           .addField("💠|Comandos", `\`ajuda, user, ...\``)
           .addField("🔅|Administração", `\`limpar, kick...\``)
           .addField("🌀|Entretenimento", `\`jokenpo, piada, d6/d20...\``);
