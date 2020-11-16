@@ -8,19 +8,21 @@ module.exports = {
   },
   run: async (bot, message, args, tools) => {
     await message.react("✅");
+    
+    const autor = message.author.username   
     var emprego = await db.get(`trabaio_${message.author.id}`); // Puxando o 'trabaio', que iremos utilizar para definir na DB o trabalho dos usuários
     if (emprego === 1)
-      return message.reply(`você já tem um emprego! 🐴 Domador`); 
+      return message.channel.send(` ${autor} você já trabalha como 🐴 Domador!`); 
     if (emprego === 2)
-      return message.reply(`você já tem um emprego! 🏺 Artesão`); 
+      return message.channel.send(` ${autor} você já trabalha como 🏺 Artesão!`); 
     if (emprego === 3)
-      return message.reply(`você já tem um emprego! ⚔️ Ferreiro`); 
+      return message.channel.send(` ${autor} você já trabalha como ⚔️ Ferreiro!`); 
     if (emprego === 4)
-      return message.reply(`você já tem um emprego! 🏹 Armeiro`);
+      return message.channel.send(` ${autor} você já trabalha como 🏹 Armeiro!`);
 
     let embed = new Discord.MessageEmbed() // Criando uma embed
       .setDescription(
-        `Nobre guerreiro para voce ter um emprego, primeiro deve escolher ele!\n\n🐴 = Domador\n🏺 = Artesão\n⚔️ = Ferreiro\n🏹 = Armeiro`
+        `Nobre guerreiro para voce ter um emprego, primeiro deve escolher um entre os listados!\n\n🐴 = Domador\n🏺 = Artesão\n⚔️ = Ferreiro\n🏹 = Armeiro`
       )
       .setColor("RAMDOM");
 
