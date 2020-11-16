@@ -49,12 +49,22 @@ module.exports = {
             `Mostra as informações sobre o servidor!`,
             inline
           )
+        .addField(
+            `ㅤ`,
+            `ㅤ`,
+            inline
+          )
           .addField(
             `\`usuario\``,
             `Mostra as informações de um membro (marque alguem)!`,
             inline
           )
           .addField(`\`sorteio\``, `Faz um sorteio no servidor!`, inline)
+         .addField(
+            `ㅤ`,
+            `ㅤ`,
+            inline
+          )
           .setColor("RANDOM");
         msg.edit(embed);
       });
