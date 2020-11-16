@@ -1,3 +1,5 @@
+const Discord = require("discord.js");
+
 module.exports = {
   config: {
     name: "say",
@@ -15,10 +17,16 @@ module.exports = {
     let mChannel = message.mentions.channels.first();
     if (mChannel) {
       argsresult = args.slice(1).join(" ");
-      mChannel.send(argsresult);
+      
+      const embed = new Discord.MessageEmbed()
+      .setDescription(`${argsresult}`)
+      mChannel.send(embed);
     } else {
       argsresult = args.join(" ");
-      message.channel.send(argsresult);
+      const embedd = new Discord.MessageEmbed()
+      .setDescription(`${argsresult}`)
+      .setColor("RANDOM")
+      message.channel.send(embedd);
     }
     message.delete();
   }

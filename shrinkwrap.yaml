@@ -1,6 +1,7 @@
 dependencies:
   discord.js: 12.4.1
   moment: 2.29.1
+  ms: 2.1.2
   parse-ms: 2.1.0
   quick.db: 7.1.3
   snekfetch: 4.0.4
@@ -299,6 +300,10 @@ packages:
     dev: false
     resolution:
       integrity: sha512-kHmoybcPV8Sqy59DwNDY3Jefr64lK/by/da0ViFcuA4DH0vQg5Q6Ze5VimxkfQNSC+Mls/Kx53s7TjP1RhFEDQ==
+  /ms/2.1.2:
+    dev: false
+    resolution:
+      integrity: sha512-sGkPx+VjMtmA6MX27oA4FBFELFCZZ4S4XqeGOXCv68tT+jb3vk/RyaKWP0PTKyWtmLSM0b+adUTEvbs1PEaH2w==
   /napi-build-utils/1.0.2:
     dev: false
     resolution:
@@ -611,6 +616,7 @@ shrinkwrapVersion: 3
 specifiers:
   discord.js: ^12.2.0
   moment: ^2.25.3
+  ms: ^2.1.2
   parse-ms: ^2.1.0
   quick.db: ^7.1.1
   snekfetch: ^4.0.4
