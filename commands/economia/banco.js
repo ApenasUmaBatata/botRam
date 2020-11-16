@@ -15,7 +15,7 @@ module.exports = {
     if (quantia === null) quantia = 0; // para não aparecer 'null' no código, caso o usuário não tenha nenhum 'money', vamos definir como zero (0)
 
     message.channel.send(
-      `**${member.username}** tem **🔆${quantia}** moedas sagradas`
+      `**${member.username}** tem **🔆${quantia}** moedas sagradas!`
     ); // mensagem mostrando a quantia de 'money'
   }
 };

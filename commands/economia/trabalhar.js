@@ -34,7 +34,7 @@ module.exports = {
 
     const quantidade = ["2", "3", "4"];
 
-    let timeout = 1.8e7; // Definindo um tempo para utilizar o comando, no caso desse, 5 horas (em milisegundos)
+    let timeout = 7.2e+6; // Definindo um tempo para utilizar o comando, no caso desse, 5 horas (em milisegundos)
     let quantia = Math.floor(Math.random() * 50) + 10; // Definindo quanto o usuário pode ganhar
     let trabalho = await db.get(`work_${message.author.id}`); // Puxando da DataBase o 'work', que vai definir que o mesmo trabalhou
 
