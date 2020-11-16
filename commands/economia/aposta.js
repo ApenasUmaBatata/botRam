@@ -10,7 +10,7 @@ module.exports = {
     await message.react("✅");
 
     var money = await db.get(`money_${message.author.id}`); // Puxando da Database, a quantia de 'money' do usuário
-
+    const autor = message.author.username;
     var numeroaposta = parseInt(args[0]); // Definindo uma variável para o número que o usuário vai apostar
     if (!numeroaposta)
       return message.reply("escreva a quantia que deseja apostar!"); // Caso o usuário não escreva nada
@@ -19,7 +19,9 @@ module.exports = {
 
     if (numeroaposta > money) {
       // Caso o número que o usuário deseja apostar seja maior que o que ele possui na database
-      return message.channel.send(`:x: Você não possui **R$ ${numeroaposta}**`);
+      return message.channel.send(
+        `${autor} Você não possui **🔆 ${numeroaposta}** moedas sagradas!`
+      );
     }
 
     if (message.content.includes("-")) {

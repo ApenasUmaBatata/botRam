@@ -50,7 +50,7 @@ module.exports = {
       if (emprego === null) {
         // Caso o 'trabaio' do usuário seja 'null', ou seja, zero, iremos avisar que ele precisa de um emprego
         return message.reply(
-          `para trabalhar, você precisa de um emprego! Utilize \`f?emprego\`.`
+          `para trabalhar, você precisa de um emprego! Utilize \`Ram emprego\`.`
         );
       } else {
       } // Caso o usuário seja um Programador, que definimos como Um (1)

@@ -18,7 +18,7 @@ const autor = message.author.username;
 
     if (emprego === null) {
       // caso o 'trabaio' seja null, ou seja, sem, iremos avisar que ele precisa ter um emprego
-      message.channel.send("Você não possui um emprego para demissão...");
+      message.reply("Você não possui um emprego para demissão...");
     }
     if (emprego === 1) {
       // No arquivo para escolher um trabalho, definimos que 1 é igual à um Programador... Então, vamos fazer uma mensagem bonita
