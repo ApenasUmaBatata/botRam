@@ -13,7 +13,7 @@ module.exports = {
 
     message.channel.send(
       `__Boa sorte, e que os jogos comecem__ \n${
-        message.author.username
+        message.author
       } você tirou \`${
         player[Math.floor(Math.random() * player.length)]
       }\` e ${target} tirou \`${
