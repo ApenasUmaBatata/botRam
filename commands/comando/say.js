@@ -20,6 +20,7 @@ module.exports = {
       
       const embed = new Discord.MessageEmbed()
       .setDescription(`${argsresult}`)
+      .setColor("RANDOM")
       mChannel.send(embed);
     } else {
       argsresult = args.join(" ");
