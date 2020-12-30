@@ -6,28 +6,32 @@ module.exports = {
     aliases: ["filmes"]
   },
   run: async (bot, message, args) => {
-    await message.react("✅");
+    if (
+      !message.member.hasPermission(["ADMINISTRATOR"]) &&
+      message.author.id != "691447707134328832"
+    ) {
+      return message.reply(`você precisa da permissão \`Administrador\`.`);
+    }
 
-    // var canal = client.channels.get('692026509841662073')
-
-    var sugestao = args.slice(0).join(" ");
-    if (!args.join(" ")) return message.reply("Escreva algo!");
-
-    const embed = {
-      title: `ENQUETE`,
-      description: `:bust_in_silhouette: **Autor:** ${message.author}\n\n:inbox_tray: **Sugestão:** ${sugestao}`,
-      color: "RANDOM",
-      footer: {
-        text: `Clique em apenas um emoji para deixar sua opinião!`
-      }
-    };
-
-    message.channel.send({ embed }).then(function(msg) {
+    let argsresult;
+    let mChannel = message.mentions.channels.first();
+    if (mChannel) {
+      argsresult = args.slice(1).join(" ");
+      
+      const embed = new Discord.MessageEmbed()
+      .setDescription(`${argsresult}`)
+      .setColor("RANDOM")
+      mChannel.send(embed);
+    } else {
+      argsresult = args.join(" ");
+      const embedd = new Discord.MessageEmbed()
+      .setDescription(`${argsresult}`)
+      .setColor("RANDOM")
+      message.channel.send(embedd).then(function(msg) {
       msg.react(":one:");
-      msg.react(":two:");
-      msg.react(":three:");
-      msg.react(":four:");
+      msg.react("👎");
     });
+    }
     message.delete();
   }
 };
