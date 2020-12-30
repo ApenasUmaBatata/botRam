@@ -29,7 +29,6 @@ module.exports = {
         reaction.emoji.name === "💠" && user.id === message.author.id;
       const AdministraçãoFilter = (reaction, user) =>
         reaction.emoji.name === "🔅" && user.id === message.author.id;
-
       const EntretenimentoFilter = (reaction, user) =>
         reaction.emoji.name === "🌀" && user.id === message.author.id;
       const BackFilter = (reaction, user) =>
