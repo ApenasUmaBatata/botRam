@@ -27,7 +27,7 @@ module.exports = {
       const embedd = new Discord.MessageEmbed()
       .setDescription(`${argsresult}`)
       .setColor("RANDOM")
-      message.channel.send(embedd);
+      message.channel.send(${argsresult});
     }
     message.delete();
   }

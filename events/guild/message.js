@@ -1,4 +1,3 @@
-const db = require("quick.db");
 const Discord = require("discord.js");
 const config = require("../../config.json");
 const falas = require("../../falas.json");
@@ -11,9 +10,9 @@ module.exports = async (bot, message) => {
   if (responseObject[message.content]) {
     message.channel.send(responseObject[message.content]);
   }
-let prefix = config.prefix;
+  let prefix = config.prefix;
   if (
-    message.content === "<@705547264537657465>" ||
+    message.content === "Ram" ||
     message.content === "<@!705547264537657465>"
   ) {
     let bicon = bot.user.displayAvatarURL();
@@ -27,22 +26,7 @@ let prefix = config.prefix;
       );
     message.channel.send(embed);
   }
-  if (
-    message.content === "Ram"
-  ) {
-    let bicon = bot.user.displayAvatarURL();
-    const embed = new Discord.MessageEmbed()
-      .setThumbnail(bicon)
-      .setFooter(message.author.username, message.author.displayAvatarURL())
-      .setTitle("Você está perdido? Estou aqui para te ajudar!")
-      .setColor("#9F7DD3")
-      .setDescription(
-        `Olá jovem guerreiro, estava em minha caminhada matinal e escutei por seus gritos, se estiver perdido use \`${prefix}ajuda\`. Lembrando, uma viagem pode ser muito perigosa se você estiver sozinho!`
-      );
-    message.channel.send(embed);
-    
-  }
-
+  
   var args = message.content.substring(config.prefix.length).split(" ");
   if (!message.content.startsWith(config.prefix)) return;
   let cmd = args.shift().toLowerCase();
