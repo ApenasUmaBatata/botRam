@@ -5,7 +5,6 @@ const falas = require("../../falas.json");
 module.exports = async (bot, message) => {
   if (message.author.bot) return;
   if (message.channel.type === "dm") return;
-
   let responseObject = falas;
   if (responseObject[message.content]) {
     message.channel.send(responseObject[message.content]);
@@ -26,7 +25,6 @@ module.exports = async (bot, message) => {
       );
     message.channel.send(embed);
   }
-  
   var args = message.content.substring(config.prefix.length).split(" ");
   if (!message.content.startsWith(config.prefix)) return;
   let cmd = args.shift().toLowerCase();

@@ -10,6 +10,9 @@ module.exports = {
       var numero = Math.floor(Math.random() * 20) + 1;
   
       message.channel.send(`Você jogou o dado e... Ele caiu em: ${numero}`);
-    }
-  };
+    setTimeout(function() {
+    
+  }, 10000);  
+  }
+}
   
