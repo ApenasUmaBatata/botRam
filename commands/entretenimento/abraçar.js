@@ -7,7 +7,7 @@ module.exports = {
   run: async (bot, message, args, tools) => {
     await message.react("✅");
     if (!message.mentions.users.first())
-      return message.reply("Você precisa mencionar alguém para abraçar");
+      return message.channel.send("Mencione alguem para receber seu abraço!");
 
 
     var image = [
