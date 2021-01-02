@@ -20,8 +20,8 @@ module.exports = {
       .setDescription(`:inbox_tray: **Sugestão:** ${sugestao}`)
       .setFooter(`Clique em um emoji para deixar sua opinião!`)
     message.channel.send({ embed }).then(function(msg) {
-      msg.react("👍");
-      msg.react("👎");
+      msg.react("<:like1:795044874515906602>");
+      msg.react("<:dislike1:795044933605785600>");
     });
     message.delete();
   }
