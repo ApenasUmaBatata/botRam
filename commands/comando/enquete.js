@@ -13,20 +13,19 @@ module.exports = {
   var sugestao = args.slice(0).join(" ");
   if(!args.join(" ")) return message.reply("Escreva algo!");
   
+  let embed = new Discord.MessageEmbed()
+  .setTitle(`ENQUETE`)
+    .setColor("RANDOM")
+  .setDescription(`:bust_in_silhouette: **Autor:** ${message.author}\n\n:inbox_tray: **Sugestão:** ${sugestao}`)
+  .setFooter(`Clique em apenas um emoji para deixar sua opinião!`)
 
-  const embed = {
-    title: `ENQUETE`,
-    description: `:bust_in_silhouette: **Autor:** ${message.author}\n\n:inbox_tray: **Sugestão:** ${sugestao}`,
-    color: "RANDOM",
-    footer: {
-      text: `Clique em apenas um emoji para deixar sua opinião!`
-    }
-  };
+
+
 
   message.channel.send({ embed })
     .then(function(msg) {
-      msg.react("👍");
-      msg.react("👎");
+      msg.react("❎");
+      msg.react("❌");
     });
   message.delete();
   }
