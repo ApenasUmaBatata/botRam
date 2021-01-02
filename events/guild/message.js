@@ -27,6 +27,12 @@ let prefix = config.prefix;
       );
     message.channel.send(embed);
   }
+  if (
+    message.content === "<@705547264537657465>" ||
+    message.content === "<@!705547264537657465>"
+  ) {
+    
+  }
 
   var args = message.content.substring(config.prefix.length).split(" ");
   if (!message.content.startsWith(config.prefix)) return;
