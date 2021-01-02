@@ -46,7 +46,7 @@ module.exports = {
       );
     } else {
       var emprego = await db.get(`trabaio_${message.author.id}`); // Puxando o 'trabaio', que utilizamos como emprego
-      if (emprego === null) {
+      if (emprego === 0) {
         // Caso o 'trabaio' do usuário seja 'null', ou seja, zero, iremos avisar que ele precisa de um emprego
         return message.channel.send(
           `para trabalhar, você precisa de um emprego! Utilize \`Ram emprego\`.`
