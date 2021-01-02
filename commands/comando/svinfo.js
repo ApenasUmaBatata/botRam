@@ -16,7 +16,7 @@ module.exports = {
       .addField("Dono", message.guild.owner, inline)
       .addField("Região", message.guild.region, inline)
       .addField("Membros", `👥 ${message.guild.memberCount}`, inline)
-      .addField("Roles", message.guild.roles.cache.size, inline)
+      .addField("Cargos", message.guild.roles.cache.size, inline)
       .addField("Canais", message.guild.channels.cache.size, inline);
 
     message.channel.send(serverembed);

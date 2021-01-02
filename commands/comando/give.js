@@ -36,7 +36,7 @@ module.exports = {
     let prize = args.slice(2).join(" ");
     if (!prize)
       return message.channel.send(
-        `Impossivel completar ação, nenhum sorteio encontrado!`
+        `Falha, nenhum item para sorteio encontrado!`
       );
     message.channel.send(`*Sorteio criado em ${channel}*`);
     let Embed = new MessageEmbed()
