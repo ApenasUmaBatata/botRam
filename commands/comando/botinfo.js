@@ -35,9 +35,6 @@ module.exports = {
     moment.locale("pt-BR");
     let inline = true;
     let bicon = bot.user.displayAvatarURL();
-    let usersize = bot.users.cache.size;
-    let chansize = bot.channels.cache.size;
-    let servsize = bot.guilds.cache.size;
     let botembed = new Discord.MessageEmbed()
       .setColor("RANDOM")
       .setThumbnail(bicon)
@@ -46,19 +43,12 @@ module.exports = {
       .addField("__Meu criador__", "SrBatata#5199", inline)
       .addField("__Meu ping__", `*${parseInt(bot.ws.ping)}*`, inline)
       .addField(
-        "Me encontro em",
-        `${servsize} servidores com ${chansize} canais e um total de ${usersize} membros!`
-      )
-      .addField(
         "__**Minha data de criação**__",
-        `${moment(bot.user.createdAt).format("LLLL")}!`
+        `${moment(bot.user.createdAt).format("LL")}!`
       )
       .addField("__**Atualmente tenho**__", `${bot.commands.size} comandos`)
-      .addField("__**Estou acordada à**__", `${uptime}`)
-      .addField(
-        `__**Vote em mim**__`,
-        `[Top.gg](https://top.gg/bot/705547264537657465)`
-      );
+      .addField("__**Estou acordada à**__", `${uptime}`);
+    //.addField(`__**Vote em mim**__`, `[Top.gg](https://top.gg/bot/705547264537657465)`);
 
     message.channel.send(botembed);
   }

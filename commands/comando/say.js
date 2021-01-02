@@ -17,17 +17,10 @@ module.exports = {
     let mChannel = message.mentions.channels.first();
     if (mChannel) {
       argsresult = args.slice(1).join(" ");
-      
-      const embed = new Discord.MessageEmbed()
-      .setDescription(`${argsresult}`)
-      .setColor("RANDOM")
-      mChannel.send(embed);
+      mChannel.send(argsresult);
     } else {
       argsresult = args.join(" ");
-      const embedd = new Discord.MessageEmbed()
-      .setDescription(`${argsresult}`)
-      .setColor("RANDOM")
-      message.channel.send(${argsresult});
+      message.channel.send(argsresult);
     }
     message.delete();
   }
