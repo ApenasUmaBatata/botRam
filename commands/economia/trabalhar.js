@@ -41,7 +41,6 @@ module.exports = {
     if (trabalho !== null && timeout - (Date.now() - trabalho) > 0) {
       // Puxando o trabalho e iremos dar o timeout
       let time = ms(timeout - (Date.now() - trabalho)); // Definindo que 'time' será os tempos
-
       message.channel.send(
         `Você pode exercer trabalho novamente em: **${time.hours}h ${time.minutes}m!**`
       );
@@ -49,7 +48,7 @@ module.exports = {
       var emprego = await db.get(`trabaio_${message.author.id}`); // Puxando o 'trabaio', que utilizamos como emprego
       if (emprego === null) {
         // Caso o 'trabaio' do usuário seja 'null', ou seja, zero, iremos avisar que ele precisa de um emprego
-        return message.reply(
+        return message.channel.send(
           `para trabalhar, você precisa de um emprego! Utilize \`Ram emprego\`.`
         );
       } else {
