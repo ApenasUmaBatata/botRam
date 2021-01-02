@@ -8,25 +8,21 @@ module.exports = {
   run: async (bot, message, args) => {
     await message.react("✅");
 
-  // var canal = client.channels.get('692026509841662073')
+    // var canal = client.channels.get('692026509841662073')
 
-  var sugestao = args.slice(0).join(" ");
-  if(!args.join(" ")) return message.reply("Escreva algo!");
-  
-  let embed = new Discord.MessageEmbed()
-  .setTitle(`ENQUETE`)
-    .setColor("RANDOM")
-  .setDescription(`:bust_in_silhouette: **Autor:** ${message.author}\n\n:inbox_tray: **Sugestão:** ${sugestao}`)
-  .setFooter(`Clique em apenas um emoji para deixar sua opinião!`)
+    var sugestao = args.slice(0).join(" ");
+    if (!args.join(" ")) return message.reply("Escreva algo!");
+    let inline = true;
 
-
-
-
-  message.channel.send({ embed })
-    .then(function(msg) {
-      msg.react("❎");
-      msg.react("❌");
+    let embed = new Discord.MessageEmbed()
+      .setTitle(`ENQUETE`)
+      .setColor("RANDOM")
+      .setDescription(`:inbox_tray: **Sugestão:** ${sugestao}`)
+      .setFooter(`Clique em um emoji para deixar sua opinião!`)
+    message.channel.send({ embed }).then(function(msg) {
+      msg.react("👍");
+      msg.react("👎");
     });
-  message.delete();
+    message.delete();
   }
 };
