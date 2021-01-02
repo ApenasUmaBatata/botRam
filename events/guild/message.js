@@ -28,9 +28,18 @@ let prefix = config.prefix;
     message.channel.send(embed);
   }
   if (
-    message.content === "<@705547264537657465>" ||
-    message.content === "<@!705547264537657465>"
+    message.content === "Ram"
   ) {
+    let bicon = bot.user.displayAvatarURL();
+    const embed = new Discord.MessageEmbed()
+      .setThumbnail(bicon)
+      .setFooter(message.author.username, message.author.displayAvatarURL())
+      .setTitle("Você está perdido? Estou aqui para te ajudar!")
+      .setColor("#9F7DD3")
+      .setDescription(
+        `Olá jovem guerreiro, estava em minha caminhada matinal e escutei por seus gritos, se estiver perdido use \`${prefix}ajuda\`. Lembrando, uma viagem pode ser muito perigosa se você estiver sozinho!`
+      );
+    message.channel.send(embed);
     
   }
 
