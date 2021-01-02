@@ -41,11 +41,8 @@ module.exports = {
       .setDescription("`Algumas informações sobre mim!`")
       .addField("__Meu nome__", `**${bot.user.username}**`, inline)
       .addField("__Meu criador__", "SrBatata#5199", inline)
-      .addField("__Meu ping__", `*${parseInt(bot.ws.ping)}*`, inline)
-      .addField(
-        "__**Minha data de criação**__",
-        `${moment(bot.user.createdAt).format("LL")}!`
-      )
+    //.addField("__Meu ping__", `*${parseInt(bot.ws.ping)}*`, inline)
+    //.addField("__**Nasci dia**__",`${moment(bot.user.createdAt).format("L")}!`)
       .addField("__**Atualmente tenho**__", `${bot.commands.size} comandos`)
       .addField("__**Estou acordada à**__", `${uptime}`);
     //.addField(`__**Vote em mim**__`, `[Top.gg](https://top.gg/bot/705547264537657465)`);

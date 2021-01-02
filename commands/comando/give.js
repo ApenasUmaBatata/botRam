@@ -42,7 +42,7 @@ module.exports = {
     let Embed = new MessageEmbed()
       .setTitle(`Novo sorteio!`)
       .setDescription(
-        `Criador do sorteio: ${message.author} \n sorteando: \n**${prize}**`
+        `O membro: ${message.author} \n Está sorteando: **${prize}**`
       )
       .setTimestamp(Date.now() + ms(args[0]))
       .setColor(`BLUE`);
