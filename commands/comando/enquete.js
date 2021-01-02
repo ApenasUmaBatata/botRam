@@ -17,7 +17,7 @@ module.exports = {
     let embed = new Discord.MessageEmbed()
       .setTitle(`ENQUETE`)
       .setColor("RANDOM")
-      .setDescription(`:inbox_tray: **Sugestão:** ${sugestao}`)
+      .setDescription(`${sugestao}`)
       .setFooter(`Clique em um emoji para deixar sua opinião!`)
     message.channel.send({ embed }).then(function(msg) {
       msg.react("<:like1:795044874515906602>");
