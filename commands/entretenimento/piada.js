@@ -28,14 +28,11 @@ module.exports = {
 
     let altstatus = list[Math.floor(Math.random() * list.length)];
 
-    let embeb = new Discord.MessageEmbed()
-      .setFooter(
-        `Piada solicitada por: ${message.author.username}`,
-        message.author.displayAvatarURL()
-      )
-      .setColor("RANDOM")
-      .setDescription(`${altstatus}`);
+    //let embeb = new Discord.MessageEmbed()
+      //.setFooter(`Piada solicitada por: ${message.author.username}`, message.author.displayAvatarURL())
+      //.setColor("RANDOM")
+      //.setDescription(`${altstatus}`);
 
-    message.channel.send(embeb);
+    message.channel.send(altstatus);
   }
 };
