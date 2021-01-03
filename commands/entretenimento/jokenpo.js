@@ -6,9 +6,7 @@ module.exports = {
   run: async (bot, message, args) => {
     await message.react("✅");
 
-    const robo = ["🗻|pedra", "🧻|papel", "✂️|tesoura"];
     const player = ["🗻|pedra", "🧻|papel", "✂️|tesoura"];
-
     let target = message.mentions.users.first() || bot.user.username;
 
     message.channel.send(
@@ -17,7 +15,7 @@ module.exports = {
       } você tirou \`${
         player[Math.floor(Math.random() * player.length)]
       }\` e ${target} tirou \`${
-        robo[Math.floor(Math.random() * robo.length)]
+        player[Math.floor(Math.random() * player.length)]
       }\``
     );
   }
