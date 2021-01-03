@@ -1,4 +1,5 @@
 const Discord = require("discord.js"); // puxando a livraria 'discord.js'
+const config = require("../../config.json");
 module.exports = {
   config: {
     name: "ajuda",
@@ -7,11 +8,13 @@ module.exports = {
   run: async (bot, message, args) => {
     await message.react("✅"); // setando a base
     // avisando sobre a embed de ajuda na DM
-    const prefi = `Ram `;
+    let prefix = config.prefix;
+    let bicon = bot.user.displayAvatarURL();
     let inline = true;
     let embed = new Discord.MessageEmbed()
       .setTitle(`Eu escutei por um pedido de ajuda?`)
       .setColor("RED")
+      .setThumbnail(bicon)
       .addField("💠|Comandos", `\`ajuda, user, sugestão...\``)
       .addField("🔅|Administração", `\`limpar, kick...\``)
       .addField("🌀|Entretenimento", `\`jokenpo, piada, d6/d20...\``);
@@ -41,7 +44,7 @@ module.exports = {
       Comandos.on("collect", r2 => {
         // criando um evento, caso o membro clique nessa reação, e todos são iguais!
         embed = new Discord.MessageEmbed()
-          .setTitle(`💠|Comandos | Prefixo = ${prefi}`)
+          .setTitle(`💠|Comandos | Prefixo = ${prefix}`)
           .addField(`\`botinfo\``, `Mostra as informações sobre o bot!`, inline)
           .addField(`\`servidor\``, `Mostra as informações sobre o servidor!`, inline)
           .addField(`\`usuario\``, `Mostra as informações de um membro (marque alguem)!`, inline)
@@ -50,7 +53,7 @@ module.exports = {
       });
       Administração.on("collect", r2 => {
         embed = new Discord.MessageEmbed()
-          .setTitle(`🔅|Administração | Prefixo = ${prefi}`)
+          .setTitle(`🔅|Administração | Prefixo = ${prefix}`)
           .addField(`\`limpar\``, `Limpa uma quantidade de mensagens!`, inline)
           .addField(`\`kick\``, `Expulsa um membro do grupo!`, inline)
           .addField(`\`Enquete\``, `Cria uma enquete no grupo!`, inline)
@@ -60,7 +63,7 @@ module.exports = {
       });
       Entretenimento.on("collect", r2 => {
         embed = new Discord.MessageEmbed()
-          .setTitle(`🌀|Entretenimento | Prefixo = ${prefi}`)
+          .setTitle(`🌀|Entretenimento | Prefixo = ${prefix}`)
           .addField(`\`d6\``, `Rode o dado de 6 lados!`, inline)
           .addField(`\`d20\``, `Rode o dado de 20 lados!`, inline)
           .addField(`\`flip\``, `Jogue a moeda para cima!`, inline)
