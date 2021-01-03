@@ -9,6 +9,8 @@ module.exports = async (bot, message) => {
   if (responseObject[message.content]) {
     message.channel.send(responseObject[message.content]);
   }
+
+
   let prefix = config.prefix;
   if (
     message.content === "Ram" ||
@@ -25,6 +27,11 @@ module.exports = async (bot, message) => {
       );
     message.channel.send(embed);
   }
+  var frases = [
+    "não reconheci esse comando, de uma olhada em \`${prefix} comandos\` 😣",
+  ]
+  let fras = frases[Math.floor(Math.random() * frases.length)]
+
   var args = message.content.substring(config.prefix.length).split(" ");
   if (!message.content.startsWith(config.prefix)) return;
   let cmd = args.shift().toLowerCase();
@@ -33,7 +40,7 @@ module.exports = async (bot, message) => {
   if (command) {
     command.run(bot, message, args);
   } else {
-    message.reply(`não reconheci esse comando 😣`);
+    message.channel.send(`${fras}`);
   }
 };
 

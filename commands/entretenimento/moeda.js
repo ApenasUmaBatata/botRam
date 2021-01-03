@@ -11,10 +11,10 @@ module.exports = {
     let altstatus = list[Math.floor(Math.random() * list.length)];
 
     message.channel.send(
-      `Olá ${message.author.username} você jogou a moeda e caiu em: \n ${altstatus}`
+      `${message.author.username} sua moeda caiu em ...`
     ).then(message => {
       setTimeout(function() {
-        message.edit(`⠀\n Ele caiu em:`);
+        message.edit(`⠀\n ${altstatus}`);
       }, 5000);
     });
   }
