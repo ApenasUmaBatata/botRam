@@ -43,27 +43,8 @@ module.exports = {
         embed = new Discord.MessageEmbed()
           .setTitle(`💠|Comandos | Prefixo = ${prefi}`)
           .addField(`\`botinfo\``, `Mostra as informações sobre o bot!`, inline)
-          .addField(
-            `\`servidor\``,
-            `Mostra as informações sobre o servidor!`,
-            inline
-          )
-        .addField(
-            `ㅤ`,
-            `ㅤ`,
-            inline
-          )
-          .addField(
-            `\`usuario\``,
-            `Mostra as informações de um membro (marque alguem)!`,
-            inline
-          )
-          .addField(`\`sorteio\``, `Faz um sorteio no servidor!`, inline)
-         .addField(
-            `ㅤ`,
-            `ㅤ`,
-            inline
-          )
+          .addField(`\`servidor\``, `Mostra as informações sobre o servidor!`, inline)
+          .addField(`\`usuario\``, `Mostra as informações de um membro (marque alguem)!`, inline)
           .setColor("RANDOM");
         msg.edit(embed);
       });
@@ -83,26 +64,10 @@ module.exports = {
           .addField(`\`d6\``, `Rode o dado de 6 lados!`, inline)
           .addField(`\`d20\``, `Rode o dado de 20 lados!`, inline)
           .addField(`\`flip\``, `Jogue a moeda para cima!`, inline)
-          .addField(`\`piada\``, `O bot lhe conta uma piada!`, inline)
-          .addField(
-            `\`jokenpo\``,
-            `Brinca de pedra, papel e tesoura com o bot!`,
-            inline
-          )
+          .addField(`\`piada\``, `O bot lhe conta uma piada! (passando por reformulações)`, inline)
+          .addField(`\`jokenpo\``, `Brinca de pedra, papel e tesoura com o bot!`, inline)
           .addField(`\`abraçar\``, `Abraça alguém!`, inline)
-          .addField(`\`atirar\``, `Atira em alguém!`, inline)
-          .addField(`\`desviar\``, `Desvia do tiro de alguém!`, inline)
-          .addField(`\`caçar\``, `Começa uma caçada contra alguém!`, inline)
-          .addField(
-            `\`ship\``,
-            `Ve a chance que tem de um casal dar certo!`,
-            inline
-          )
-          .addField(
-            `\`conquista\``,
-            `Cria uma conquista no estilo menescraft!`,
-            inline
-          )
+          .addField(`\`conquista\``, `Cria uma conquista no estilo menescraft!`, inline)
           .setColor("RANDOM");
         msg.edit(embed);
       });
@@ -110,6 +75,7 @@ module.exports = {
         embed = new Discord.MessageEmbed()
           .setTitle(`Eu escutei por um pedido de ajuda?`)
           .setColor("RED")
+          .setThumbnail(bicon)
           .addField("💠|Comandos", `\`ajuda, user, ...\``)
           .addField("🔅|Administração", `\`limpar, kick...\``)
           .addField("🌀|Entretenimento", `\`jokenpo, piada, d6/d20...\``);

@@ -27,8 +27,9 @@ module.exports = async (bot, message) => {
       );
     message.channel.send(embed);
   }
-  var frases = [
-    "não reconheci esse comando, de uma olhada em \`${prefix} comandos\` 😣",
+  const frases = [
+    `Não reconheci esse comando, de uma olhada em \`${prefix} comandos\`!`,
+    `Esse comando pode não existir, de um olhada em \`${prefix} comandos\`!`,
   ]
   let fras = frases[Math.floor(Math.random() * frases.length)]
 
