@@ -9,7 +9,7 @@ module.exports = {
   run: async (bot, message, args, tools) => {
     //await message.react("✅");
 
-    const domador = ["Cavalos", "Robôs", "Cachorros", "Unicórnios"];
+    const domador = ["Cavalos", "Robôs", "Cachorros", "Unicórnios", "Cachorros selvagens", ""];
     const artesão = [
       "Esculturas de argila",
       "Mesas de madeira",
@@ -27,6 +27,7 @@ module.exports = {
     const armeiro = ["Arcos divino", "Espingardas sagrada"];
     const rep = ["reparou", "criou", "fundiu"];
     const quantidade = ["2", "3", "4"];
+    const ani = ["domou", "acariciu", "alimentou"]
 
     let timeout = 7.2e+6; // Definindo um tempo para utilizar o comando, no caso desse, 5 horas (em milisegundos)
     let quantia = Math.floor(Math.random() * 50) + 10; // Definindo quanto o usuário pode ganhar
@@ -62,7 +63,7 @@ module.exports = {
       if (emprego === 2) {
         // Puxando a lista que criamos no início
         message.channel.send(
-          `Hoje, você criou **${
+          `Hoje, você ${rep[Math.floor(Math.random() * rep.length)]} **${
             quantidade[Math.floor(Math.random() * quantidade.length)]
           }** **${
             artesão[Math.floor(Math.random() * artesão.length)]
@@ -74,7 +75,7 @@ module.exports = {
       if (emprego === 3) {
         // Puxando a lista que criamos no início
         message.channel.send(
-          `Hoje, você criou **${
+          `Hoje, você ${rep[Math.floor(Math.random() * rep.length)]} **${
             quantidade[Math.floor(Math.random() * quantidade.length)]
           }** **${
             ferreiro[Math.floor(Math.random() * ferreiro.length)]
