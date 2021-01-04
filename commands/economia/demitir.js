@@ -6,7 +6,7 @@ module.exports = {
     aliases: ["demitir", "demissão"]
   },
   run: async (bot, message, args, tools) => {
-    await message.react("✅");
+    //await message.react("✅");
 const autor = message.author.username;
     var conta = await db.get(`money_${message.author.id}`); // puxando o 'money' armazenado na database
 

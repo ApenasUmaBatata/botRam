@@ -4,11 +4,11 @@ const Discord = require("discord.js"); // puxando a livraria Discord.js
 
 module.exports = {
   config: {
-    name: "diario",
+    name: "diaria",
     aliases: ["dia","daily"]
   },
   run: async (bot, message, args, tools) => {
-    await message.react("✅");
+    //await message.react("✅");
     let timeout = 86400000; // definindo o tempo do daily (No meu caso 24hrs)
     let amount = Math.floor(Math.random() * 10) + 0; // um sistema randômico do quanto o usuário irá ganhar
 

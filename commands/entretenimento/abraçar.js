@@ -5,9 +5,9 @@ module.exports = {
     aliases: ["hug"]
   },
   run: async (bot, message, args, tools) => {
-    await message.react("✅");
+    //await message.react("✅");
     if (!message.mentions.users.first())
-      return message.channel.send("Mencione alguem para receber seu abraço!");
+      return message.channel.send("Mencione alguem para receber seu carinhoso abraço!");
     var image = [
       "https://cdn.nekos.life/hug/hug_026.gif",
       "https://i.pinimg.com/originals/4d/89/d7/4d89d7f963b41a416ec8a55230dab31b.gif",

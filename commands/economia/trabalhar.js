@@ -7,11 +7,9 @@ module.exports = {
     aliases: ["work"]
   },
   run: async (bot, message, args, tools) => {
-    await message.react("✅");
+    //await message.react("✅");
 
-    // Lista funções de um Programador irá fazer
     const domador = ["Cavalos", "Robôs", "Cachorros", "Unicórnios"];
-    // Lista funções de um Designer
     const artesão = [
       "Esculturas de argila",
       "Mesas de madeira",
@@ -19,7 +17,6 @@ module.exports = {
       "Jarros de argila",
       "Jarros revestido de ouro"
     ];
-
     const ferreiro = [
       "Espadas de uma mão",
       "Espadas de jade",
@@ -27,11 +24,8 @@ module.exports = {
       "Espadas revestida de ouro",
       "Escudos de jade"
     ];
-
     const armeiro = ["Arcos divino", "Espingardas sagrada"];
-
     const rep = ["reparou", "criou", "fundiu"];
-
     const quantidade = ["2", "3", "4"];
 
     let timeout = 7.2e+6; // Definindo um tempo para utilizar o comando, no caso desse, 5 horas (em milisegundos)

@@ -7,7 +7,7 @@ module.exports = {
     aliases: ["aposta", "sorte"]
   },
   run: async (bot, message, args, tools) => {
-    await message.react("✅");
+    //await message.react("✅");
 
     var money = await db.get(`money_${message.author.id}`); // Puxando da Database, a quantia de 'money' do usuário
     const autor = message.author.username;

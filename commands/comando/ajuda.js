@@ -6,8 +6,7 @@ module.exports = {
     aliases: ["comandos", "help"]
   },
   run: async (bot, message, args) => {
-    await message.react("✅"); // setando a base
-    // avisando sobre a embed de ajuda na DM
+    //await message.react("✅");
     let prefix = config.prefix;
     let bicon = bot.user.displayAvatarURL();
     let inline = true;

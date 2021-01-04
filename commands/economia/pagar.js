@@ -7,7 +7,7 @@ module.exports = {
     aliases: ["doar", "pay"]
   },
   run: async (bot, message, args, tools) => {
-    await message.react("✅");
+    //await message.react("✅");
 
     const autor = message.author.username;
 

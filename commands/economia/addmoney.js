@@ -7,7 +7,7 @@ module.exports = {
     aliases: ["addcoin", "+dinheiro"]
   },
   run: async (bot, message, args, tools) => {
-    await message.react("✅");
+    //await message.react("✅");
 
     if (!message.member.hasPermission("ADMINISTRATOR"))
       return message.reply(`você precisa da permissão \`ADMINISTRADOR\`.`);

@@ -7,7 +7,7 @@ module.exports = {
     aliases: ["trabalhos"]
   },
   run: async (bot, message, args, tools) => {
-    await message.react("✅");
+    //await message.react("✅");
     
     const autor = message.author.username   
     var emprego = await db.get(`trabaio_${message.author.id}`); // Puxando o 'trabaio', que iremos utilizar para definir na DB o trabalho dos usuários

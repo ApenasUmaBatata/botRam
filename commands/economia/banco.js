@@ -4,10 +4,10 @@ const Discord = require("discord.js"); // Puxando a livraria Discord.js
 module.exports = {
   config: {
     name: "banco",
-    aliases: ["money", "saldo", "dinheiro"]
+    aliases: ["money", "saldo", "dinheiro", "carteira"]
   },
   run: async (bot, message, args, tools) => {
-    await message.react("✅");
+    //await message.react("✅");
     // puxando um usuário para mencionar, no caso, de quem queremos ver o 'money'
     let member = message.mentions.users.first() || message.author; // caso não mencione, será o autor
 
