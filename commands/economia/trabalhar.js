@@ -42,8 +42,8 @@ module.exports = {
       var emprego = await db.get(`trabaio_${message.author.id}`); // Puxando o 'trabaio', que utilizamos como emprego
       if (emprego === 0) {
         // Caso o 'trabaio' do usuário seja 'null', ou seja, zero, iremos avisar que ele precisa de um emprego
-        return message.channel.send(
-          `para trabalhar, você precisa de um emprego! Utilize \`Ram emprego\`.`
+         message.channel.send(
+          `Para trabalhar, você precisa de um emprego! Utilize \`Ram emprego\`.`
         );
       } else {
       } // Caso o usuário seja um Programador, que definimos como Um (1)
