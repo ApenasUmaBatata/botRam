@@ -5,9 +5,9 @@ module.exports = {
     aliases: ["membroinfo", "memberinfo", "user", "usuario", "membro"]
   },
   run: async (bot, message, args) => {
-    await message.react("✅");
+    //await message.react("✅");
     let inline = true;
-    let presence = true;
+    //let presence = true;
     let picon = message.mentions.members.first() || message.member;
     //const status = {
     //online: "Online",
@@ -19,7 +19,7 @@ module.exports = {
       message.mentions.members.first() ||
       message.guild.members.cache.get(args[0]) ||
       message.member;
-    let target = message.mentions.users.first() || message.author;
+    //let target = message.mentions.users.first() || message.author;
 
     if (member.user.bot === true) {
       bot = "Sim";

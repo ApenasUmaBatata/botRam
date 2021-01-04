@@ -5,7 +5,7 @@ module.exports = {
     aliases: ["serverinfo", "servidor"]
   },
   run: async (bot, message, args) => {
-    await message.react("✅");
+    //await message.react("✅");
 
     let inline = true;
     let sicon = message.guild.iconURL();

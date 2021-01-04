@@ -69,7 +69,7 @@ module.exports = {
           .addField(`\`piada\``, `O bot lhe conta uma piada! (passando por reformulações)`, inline)
           .addField(`\`jokenpo\``, `Brinca de pedra, papel e tesoura com o bot!`, inline)
           .addField(`\`abraçar\``, `Abraça alguém!`, inline)
-          .addField(`\`conquista\``, `Cria uma conquista no estilo menescraft!`, inline)
+          .addField(`\`conquista\``, `Cria uma conquista no estilo menescraft! (passando por reformulações)`, inline)
           .setColor("RANDOM");
         msg.edit(embed);
       });

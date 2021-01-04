@@ -7,7 +7,7 @@ module.exports = {
     aliases: ["giveaway", "sorteio"]
   },
   run: async (bot, message, args) => {
-    await message.react("✅");
+    //await message.react("✅");
 
     if (
       !message.member.hasPermission("ADMINISTRATOR") &&
