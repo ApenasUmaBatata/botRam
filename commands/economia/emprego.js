@@ -19,10 +19,12 @@ module.exports = {
       return message.channel.send(` ${autor} você já trabalha como ⚔️ Ferreiro!`); 
     if (emprego === 4)
       return message.channel.send(` ${autor} você já trabalha como 🏹 Armeiro!`);
+    if (emprego === 5)
+      return message.channel.send(` ${autor} você já trabalha como 🪓 Lenhador!`);
 
     let embed = new Discord.MessageEmbed() // Criando uma embed
       .setDescription(
-        `Nobre guerreiro para voce ter um emprego, primeiro deve escolher um entre os listados!\n\n🐴 = Domador\n🏺 = Artesão\n⚔️ = Ferreiro\n🏹 = Armeiro`
+        `Nobre guerreiro para voce ter um emprego, primeiro deve escolher um entre os listados!\n\n🐴 = Domador\n🏺 = Artesão\n⚔️ = Ferreiro\n🏹 = Armeiro \n🪓 = Lenhador`
       )
       .setColor("RAMDOM");
 
@@ -33,12 +35,13 @@ module.exports = {
         .react("🐴")
         .then(() => msg.react("🏺"))
         .then(() => msg.react("⚔️"))
-        .then(() => msg.react("🏹")); // reagindo com dois emojis, referentes à cada emprego
+        .then(() => msg.react("🏹"))
+        .then(() => msg.react("🪓")); // reagindo com dois emojis, referentes à cada emprego
 
       const filter = (reaction, user) => {
         // Criando um filtro para quem clicou no emoji
         return (
-          ["🐴", "🏺", "⚔️", "🏹"].includes(reaction.emoji.name) &&
+          ["🐴", "🏺", "⚔️", "🏹", "🪓"].includes(reaction.emoji.name) &&
           user.id === message.author.id
         ); // caso o ID do usuário que clicou, seja igual ao do que puxou, iremos fazer a ação
       };
@@ -67,6 +70,11 @@ module.exports = {
             // Agora, caso o usuário clique no outro emoji, referente à Designer
             message.reply("Você adquiriu o emprego *Armeiro*");
             db.add(`trabaio_${message.author.id}`, 4); // iremos adicionar 2 (dois) na DB, que iremos definir como Designer
+          }
+          if (reaction.emoji.name === "🪓") {
+            // Agora, caso o usuário clique no outro emoji, referente à Designer
+            message.reply("Você adquiriu o emprego *Lenhador*");
+            db.add(`trabaio_${message.author.id}`, 5); // iremos adicionar 2 (dois) na DB, que iremos definir como Designer
           }
         })
         .catch(collected => {
