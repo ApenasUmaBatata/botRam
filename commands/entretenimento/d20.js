@@ -11,7 +11,7 @@ module.exports = {
 
     message.channel.send(`Você jogou o dado e...`).then(message => {
       setTimeout(function() {
-        message.edit(`⠀\n Ele caiu em: ${numero}`);
+        message.edit(`⠀\n Ele caiu em: ${numero}`).then(message => {message.edit});
       }, 5000);
     });
   }
