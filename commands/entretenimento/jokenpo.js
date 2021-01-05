@@ -1,6 +1,6 @@
 module.exports = {
   config: {
-    name: "ppd",
+    name: "ppt",
     aliases: ["jokenpo"]
   },
   run: async (bot, message, args) => {

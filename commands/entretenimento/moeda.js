@@ -4,7 +4,7 @@ module.exports = {
     aliases: ["moeda"]
   },
   run: async (bot, message, args) => {
-    await message.react("✅");
+    //await message.react("✅");
 
     var list = ["cara", "coroa"];
 
