@@ -5,34 +5,34 @@ module.exports = {
     aliases: ["."]
   },
 run: async (bot, message, args) => {
-        if (!args[1]){
+        if (!args[0]){
            return message.channel.send('Please include your choice')
         }
         let choices = ['rock', 'paper', 'scissors'];
-        if (choices.includes((args[1]).toLowerCase())){
+        if (choices.includes((args[0]).toLowerCase())){
             let number = Math.floor(Math.random() * 3);
             if (number == 1){
-                return message.channel.send('It was a tie , we both had '+ (args[1]).toLowerCase())    
+                return message.channel.send('It was a tie , we both had '+ (args[0]).toLowerCase())    
             }
             if (number == 2){
-                if (args[1].toLowerCase()== "rock" ){
+                if (args[0].toLowerCase()== "rock" ){
                     return message.channel.send('I won, I had scissors!')
                     }
-                        if (args[1].toLowerCase()== "paper" ){
+                        if (args[0].toLowerCase()== "paper" ){
                             return message.channel.send('I won, I had rock!')
                         }
-                            if (args[1].toLowerCase()== "scissors" ){
+                            if (args[0].toLowerCase()== "scissors" ){
                                 return message.channel.send('I won, I had paper!')
                             }
             }
             if (number == 0){
-                if (args[1].toLowerCase()== "rock" ){
+                if (args[0].toLowerCase()== "rock" ){
                 return message.channel.send('You won, I had scissors!')
                 }
-                    if (args[1].toLowerCase()== "paper" ){
+                    if (args[0].toLowerCase()== "paper" ){
                         return message.channel.send('You won, I had rock!')
                     }
-                        if (args[1].toLowerCase()== "scissors" ){
+                        if (args[0].toLowerCase()== "scissors" ){
                             return message.channel.send('You won, I had paper!')
                         }
             }
