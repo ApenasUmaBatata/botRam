@@ -1,0 +1,19 @@
+const Discord = require("discord.js");
+module.exports = {
+  config: {
+    name: "piada",
+    aliases: ["piadas", "fun"]
+  },
+  run: async (bot, message, args, member) => {
+
+    var list = [
+        "oi"
+
+    ]
+
+
+    let altstatus = list[Math.floor(Math.random() * list.length)];
+
+    message.channel.send(altstatus);
+  }
+}
