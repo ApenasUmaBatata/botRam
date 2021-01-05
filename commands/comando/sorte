@@ -27,10 +27,7 @@ module.exports = {
     ];
 
     let altstatus = list[Math.floor(Math.random() * list.length)];
-    if (
-      altstatus ===
-      "Parabéns você acabou de ganhar o ultra, mega, raro, master, espetacular, cargo secreto!"
-    ) {
+    if (altstatus === "Parabéns você acabou de ganhar o ultra, mega, raro, master, espetacular, cargo secreto!") {
       message.member.roles.add("702385209043320833");
     }
 
