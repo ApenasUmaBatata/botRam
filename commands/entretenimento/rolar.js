@@ -12,9 +12,10 @@ module.exports = {
       var d100 = Math.floor(Math.random() * 100) + 1;
   
       message.channel.send(`Seus dados cairam em d6- ${d6} d20- ${d20} ${d100}`).then(msg => {
-        // evento para reagir a mensagem
+        setTimeout(function(){
         msg.edit("💠");
-      }
+      },5000)
+    })msg.edit("oi")
     }
   };
   
