@@ -16,13 +16,13 @@ run: async (bot, message, args) => {
             }
             if (number == 2){
                 if (args[0].toLowerCase()== "rock" ){
-                    return message.channel.send('I won, I had scissors!')
+                    return message.channel.send('I won, I had paper!')
                     }
                         if (args[0].toLowerCase()== "paper" ){
-                            return message.channel.send('I won, I had rock!')
+                            return message.channel.send('I won, I had scissors!')
                         }
                             if (args[0].toLowerCase()== "scissors" ){
-                                return message.channel.send('I won, I had paper!')
+                                return message.channel.send('I won, I had rock!')
                             }
             }
             if (number == 0){
