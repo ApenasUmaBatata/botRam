@@ -1,54 +1,51 @@
 const Discord = require('discord.js');
 module.exports = {
   config: {
-    name: "rps",
-    aliases: ["."]
+    name: "ppt",
+    aliases: ["jokenpo", "rps"]
   },
 run: async (bot, message, args) => {
         if (!args[0]){
-           return message.channel.send('Please include your choice')
+           return message.channel.send(`⠀\n Porfavor inclua sua escolha (pedra, papel ou tesoura)!\n Modo de uso: Ram jokenpo papel .`)
         }
-        let choices = ['rock', 'paper', 'scissors'];
+        let choices = ['pedra', 'papel', 'tesoura'];
         if (choices.includes((args[0]).toLowerCase())){
-            let escolhas = choices[Math.floor(Math.random() * choices.length)];
-            if (escolhas == choices){
-                return message.channel.send('It was a tie , we both had '+ (args[0]).toLowerCase())    
-            }
-            if (escolhas == "rock"){
-                if (args[0].toLowerCase()== "rock" ){
+            let escolhas = choices[Math.floor(Math.random() * choices.length)];            
+            if (escolhas == "pedra"){
+                if (args[0].toLowerCase()== "pedra" ){
                     return message.channel.send('empate eu tambem tirei pedra')
                     }
-                        if (args[0].toLowerCase()== "paper" ){
+                        if (args[0].toLowerCase()== "papel" ){
                             return message.channel.send('voce ganhou eu tirei pedra')
                         }
-                            if (args[0].toLowerCase()== "scissors" ){
+                            if (args[0].toLowerCase()== "tesoura" ){
                                 return message.channel.send('eu ganhei eu tirei pedra')
                             }
             }
-            if (escolhas == "paper"){
-                if (args[0].toLowerCase()== "rock" ){
+            if (escolhas == "papel"){
+                if (args[0].toLowerCase()== "pedra" ){
                 return message.channel.send('eu ganhei eu tirei papel')
                 }
-                    if (args[0].toLowerCase()== "paper" ){
+                    if (args[0].toLowerCase()== "papel" ){
                         return message.channel.send('empate eu tambem tirei papel')
                     }
-                        if (args[0].toLowerCase()== "scissors" ){
+                        if (args[0].toLowerCase()== "tesoura" ){
                             return message.channel.send('voce ganhou eu tirei papel')
                         }
             }
-            if (escolhas == "scissors"){
-                if (args[0].toLowerCase()== "rock" ){
+            if (escolhas == "tesoura"){
+                if (args[0].toLowerCase()== "pedra" ){
                 return message.channel.send('voce ganhou eu tirei tesoura')
                 }
-                    if (args[0].toLowerCase()== "paper" ){
+                    if (args[0].toLowerCase()== "papel" ){
                         return message.channel.send('eu ganhei eu tirei tesoura')
                     }
-                        if (args[0].toLowerCase()== "scissors" ){
+                        if (args[0].toLowerCase()== "tesoura" ){
                             return message.channel.send('empate eu tambem tirei tesoura')
                         }
             }
         } else {
-            return message.channel.send('Please include either: Rock, Paper or Scissors!')
+            return message.channel.send('Porfavor inclua apenas pedra, papel ou tesoura!')
         }
     }
 }
