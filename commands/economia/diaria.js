@@ -18,13 +18,13 @@ module.exports = {
       // pegando o 'daily' e verificando se o timeout expirou
       let time = ms(timeout - (Date.now() - daily)); // definindo os tempos na variável 'time'
       // caso o timeout tenha expirado
-      message.reply(
-        `Você já coletou suas moedas sagradas hoje! Tente novamente em: **${time.hours}h ${time.minutes}m ${time.seconds}s**`
+      message.channel.send(
+        `${message.author.username} você já coletou suas moedas sagradas hoje! Tente novamente em: **${time.hours}h ${time.minutes}m ${time.seconds}s.**`
       );
     } else {
       // caso não tenha expirado
 
-      message.channel.send(`Você recebeu **🔆 ${amount}** moedas sagradas`);
+      message.channel.send(`${message.author.username} você recebeu **🔆 ${amount}** moedas sagradas`);
 
       db.add(`money_${message.author.id}`, amount); // adicionando na database do usuário a quantia que ele ganhou
       db.set(`daily_${message.author.id}`, Date.now()); // adicionando na database do usuário, o daily (o tempo)
