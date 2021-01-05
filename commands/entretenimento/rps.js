@@ -10,41 +10,41 @@ run: async (bot, message, args) => {
         }
         let choices = ['rock', 'paper', 'scissors'];
         if (choices.includes((args[0]).toLowerCase())){
-            let number = choices[Math.floor(Math.random() * choices.length)];
-            if (number === choices){
+            let escolhas = choices[Math.floor(Math.random() * choices.length)];
+            if (escolhas == choices){
                 return message.channel.send('It was a tie , we both had '+ (args[0]).toLowerCase())    
             }
-            if (number === "rock"){
+            if (escolhas == "rock"){
                 if (args[0].toLowerCase()== "rock" ){
-                    return message.channel.send('I won, I had paper!')
+                    return message.channel.send('empate eu tambem tirei pedra')
                     }
                         if (args[0].toLowerCase()== "paper" ){
-                            return message.channel.send('I won, I had scissors!')
+                            return message.channel.send('voce ganhou eu tirei pedra')
                         }
                             if (args[0].toLowerCase()== "scissors" ){
-                                return message.channel.send('I won, I had rock!')
+                                return message.channel.send('eu ganhei eu tirei pedra')
                             }
             }
-            if (number === "paper"){
+            if (escolhas == "paper"){
                 if (args[0].toLowerCase()== "rock" ){
-                return message.channel.send('You won, I had scissors!')
+                return message.channel.send('eu ganhei eu tirei papel')
                 }
                     if (args[0].toLowerCase()== "paper" ){
-                        return message.channel.send('You won, I had rock!')
+                        return message.channel.send('empate eu tambem tirei papel')
                     }
                         if (args[0].toLowerCase()== "scissors" ){
-                            return message.channel.send('You won, I had paper!')
+                            return message.channel.send('voce ganhou eu tirei papel')
                         }
             }
-            if (number === "scissors"){
+            if (escolhas == "scissors"){
                 if (args[0].toLowerCase()== "rock" ){
-                return message.channel.send('You won, I had scissors!')
+                return message.channel.send('voce ganhou eu tirei tesoura')
                 }
                     if (args[0].toLowerCase()== "paper" ){
-                        return message.channel.send('You won, I had rock!')
+                        return message.channel.send('eu ganhei eu tirei tesoura')
                     }
                         if (args[0].toLowerCase()== "scissors" ){
-                            return message.channel.send('You won, I had paper!')
+                            return message.channel.send('empate eu tambem tirei tesoura')
                         }
             }
         } else {
