@@ -9,7 +9,14 @@ module.exports = {
   run: async (bot, message, args, tools) => {
     //await message.react("✅");
 
-    const domador = ["Cavalos", "Robôs", "Cachorros", "Unicórnios", "Cachorros selvagens", ""];
+    const domador = [
+      "Cavalos",
+      "Robôs",
+      "Cachorros",
+      "Unicórnios",
+      "Cachorros selvagens",
+      ""
+    ];
     const artesão = [
       "Esculturas de argila",
       "Mesas de madeira",
@@ -27,9 +34,9 @@ module.exports = {
     const armeiro = ["Arcos divino", "Espingardas sagrada"];
     const rep = ["reparou", "criou", "fundiu"];
     const quantidade = ["2", "3", "4"];
-    const ani = ["domou", "acariciu", "alimentou"]
+    const ani = ["domou", "acariciu", "alimentou"];
 
-    let timeout = 7.2e+6; // Definindo um tempo para utilizar o comando, no caso desse, 5 horas (em milisegundos)
+    let timeout = 7.2e6; // Definindo um tempo para utilizar o comando, no caso desse, 5 horas (em milisegundos)
     let quantia = Math.floor(Math.random() * 50) + 10; // Definindo quanto o usuário pode ganhar
     let trabalho = await db.get(`work_${message.author.id}`); // Puxando da DataBase o 'work', que vai definir que o mesmo trabalhou
 
@@ -43,7 +50,9 @@ module.exports = {
       let emprego = await db.get(`trabaio_${message.author.id}`); // Puxando o 'trabaio', que utilizamos como emprego
       if (emprego === null) {
         // Caso o 'trabaio' do usuário seja 'null', ou seja, zero, iremos avisar que ele precisa de um emprego
-      message.channel.send(`Para trabalhar, você precisa de um emprego! Utilize \`Ram emprego\`.`);
+        message.channel.send(
+          `Para trabalhar, você precisa de um emprego! Utilize \`Ram emprego\`.`
+        );
       } else {
       } // Caso o usuário seja um Programador, que definimos como Um (1)
       if (emprego === 1) {

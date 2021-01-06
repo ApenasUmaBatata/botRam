@@ -1,8 +1,12 @@
 const db = require('quick.db')
 const Discord = require('discord.js')
 
-exports.run = async (bot, message, args, config) => {
-
+module.exports = {
+  config: {
+    name: "roubar",
+    aliases: ["-money", ]
+  },
+  run: async (bot, message, args, tools) => {
 
     let user = message.mentions.members.first()
     let targetuser = await db.get(`money_${user.id}`) // fetch mentioned users balance
@@ -34,8 +38,4 @@ exports.run = async (bot, message, args, config) => {
     db.subtract(`money_${user.id}`, random)
     db.add(`money_${message.author.id}`, random)
 }
-exports.help = {
-  name: "rob",
-    aliases: []
-
-};
+}
