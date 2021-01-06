@@ -11,7 +11,9 @@ module.exports = {
       var d20 = Math.floor(Math.random() * 20) + 1;
       var d100 = Math.floor(Math.random() * 100) + 1;
   
-      message.channel.send(`Seus dados cairam em d6- ${d6} d20- ${d20} ${d100}`);
+      message.channel.send(`Seus dados cairam em d6- ${d6} d20- ${d20} ${d100}`).then(msg => {
+        msg.edit("💠")
+      })
     }
   };
   
