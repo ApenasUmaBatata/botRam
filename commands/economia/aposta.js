@@ -28,8 +28,8 @@ module.exports = {
       // Caso o usuário tente botar um - (menos) no número (isso pode gerar um bug, que mesmo ele perdendo, irá ganhar, pois menos + menos é mais (+))
       return message.reply(`hmmmm, quer abusar safadenho?`);
     }
-    var random = Math.floor(Math.random() * (5 - 2) + 2); // Um sistema randômico
-    if (random === 3) {
+    var random = Math.floor(Math.random() * (3 - 1) + 1); // Um sistema randômico
+    if (random === 2) {
       // caso esse sistema caia em 3, o usuário terá ganhado
 
       message.channel.send(
