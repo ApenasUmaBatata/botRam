@@ -40,12 +40,10 @@ module.exports = {
         `Você pode exercer trabalho novamente em: **${time.hours}h ${time.minutes}m!**`
       );
     } else {
-      var emprego = await db.get(`trabaio_${message.author.id}`); // Puxando o 'trabaio', que utilizamos como emprego
+      let emprego = await db.get(`trabaio_${message.author.id}`); // Puxando o 'trabaio', que utilizamos como emprego
       if (emprego === 0) {
         // Caso o 'trabaio' do usuário seja 'null', ou seja, zero, iremos avisar que ele precisa de um emprego
-        reply message.channel.send(
-          `Para trabalhar, você precisa de um emprego! Utilize \`Ram emprego\`.`
-        );
+        return message.channel.send(`Para trabalhar, você precisa de um emprego! Utilize \`Ram emprego\`.`);
       } else {
       } // Caso o usuário seja um Programador, que definimos como Um (1)
       if (emprego === 1) {
@@ -85,6 +83,18 @@ module.exports = {
         db.set(`work_${message.author.id}`, Date.now()); // Setando o timeout que criamos acima, no 'work', salvando na DataBase
       }
       if (emprego === 4) {
+        // Puxando a lista que criamos no início
+        message.channel.send(
+          `Hoje, você ${rep[Math.floor(Math.random() * rep.length)]} **${
+            quantidade[Math.floor(Math.random() * quantidade.length)]
+          }** **${
+            armeiro[Math.floor(Math.random() * armeiro.length)]
+          }** e por isso, recebeu: **🔆 ${quantia}** moedas sagradas`
+        );
+        db.add(`money_${message.author.id}`, quantia); // setando a 'quantia' de dinheiro por trabalhar hoje
+        db.set(`work_${message.author.id}`, Date.now()); // Setando o timeout que criamos acima, no 'work', salvando na DataBase
+      }
+      if (emprego === 5) {
         // Puxando a lista que criamos no início
         message.channel.send(
           `Hoje, você ${rep[Math.floor(Math.random() * rep.length)]} **${
