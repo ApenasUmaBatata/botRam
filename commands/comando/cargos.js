@@ -23,6 +23,7 @@ module.exports = {
       if (args[0].toLowerCase() == "verde") {
         let role = message.guild.roles.cache.find(r => r.name === "verde");
         message.member.roles.add(role);
+        if(membro.roles.has(cargo1))
         return message.channel.send(`Voce ganhou a cor ${cor}`);
       }
       if (args[0].toLowerCase() == "azul") {
