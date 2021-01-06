@@ -11,11 +11,8 @@ run: async (bot, message, args) => {
         let choices = ['azul', 'verde', 'vermelho'];
         if (choices.includes((args[0]).toLowerCase())){
                 if (args[0].toLowerCase() == "azul" ){
-                  
-
-
-
-
+                let role = message.guild.roles.cache.find(r => r.name === "azul")
+                member.roles.add(role)
                     return message.channel.send('empate eu tambem tirei pedra')
                     }
         } else {
