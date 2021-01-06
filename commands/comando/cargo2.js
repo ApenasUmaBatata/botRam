@@ -21,6 +21,21 @@ module.exports = {
       "preto",
       "branco"
     ];
+    
+     const autor = message.author.username   
+    var emprego = await message.author.roles.cache.get(`${message.author.id}`); // Puxando o 'trabaio', que iremos utilizar para definir na DB o trabalho dos usuários
+    if (emprego === 1)
+      return message.channel.send(` ${autor} você já trabalha como 🐴 Domador!`); 
+    if (emprego === 2)
+      return message.channel.send(` ${autor} você já trabalha como 🏺 Artesão!`); 
+    if (emprego === 3)
+      return message.channel.send(` ${autor} você já trabalha como ⚔️ Ferreiro!`); 
+    if (emprego === 4)
+      return message.channel.send(` ${autor} você já trabalha como 🏹 Armeiro!`);
+    if (emprego === 5)
+      return message.channel.send(` ${autor} você já trabalha como 🪓 Lenhador!`);
+    
+    
     if (choices.includes(args[0].toLowerCase())) {
       if (args[0].toLowerCase() == "verde") {
         let role = message.guild.roles.cache.find(r => r.name === "verde");
