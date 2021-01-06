@@ -12,13 +12,13 @@ run: async (bot, message, args) => {
         if (choices.includes((args[0]).toLowerCase())){
             let escolhas = choices[Math.floor(Math.random() * choices.length)];            
             if (escolhas == "pedra"){
-                if (args[0]() == "pedra" ){
+                if (args[0].toLowerCase() == "pedra" ){
                     return message.channel.send('empate eu tambem tirei pedra')
                     }
-                        if (args[0]() == "papel" ){
+                        if (args[0].toLowerCase() == "papel" ){
                             return message.channel.send('voce ganhou eu tirei pedra')
                         }
-                            if (args[0]() == "tesoura" ){
+                            if (args[0].toLowerCase() == "tesoura" ){
                                 return message.channel.send('eu ganhei eu tirei pedra')
                             }
             }
