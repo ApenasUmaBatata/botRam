@@ -6,15 +6,18 @@ module.exports = {
   },
 run: async (bot, message, args) => {
         if (!args[0]){
-           return message.channel.send(`⠀\n Porfavor escolha uma cor)!\n Modo de uso: Ram jokenpo papel `)
+           return message.channel.send(`⠀\n Porfavor inclua sua escolha (pedra, papel ou tesoura)!\n Modo de uso: Ram jokenpo papel `)
         }
-        let choices = ['azul', 'verde', 'preto'];
+        let choices = ['azul', 'verde', 'vermelho'];
         if (choices.includes((args[0]).toLowerCase())){
                 if (args[0].toLowerCase() == "azul" ){
-                    .cache.get
+                  
+
+
+
+
                     return message.channel.send('empate eu tambem tirei pedra')
-                    }                    
-            }
+                    }
         } else {
             return message.channel.send('Porfavor inclua apenas pedra, papel ou tesoura!')
         }
