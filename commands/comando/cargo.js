@@ -8,6 +8,7 @@ module.exports = {
     if (!args[0]) {
       return message.channel.send(`Por favor escolha uma cor!`);
     }
+    
     const user= message.author.username;
     const cor = args[0];
     let choices = [
@@ -20,6 +21,9 @@ module.exports = {
       "preto",
       "branco"
     ];
+    if (!args[0] === choices) {
+      return message.channel.send(`teste`)
+    }
     if (choices.includes(args[0].toLowerCase())) {
       if (args[0].toLowerCase() == "verde") {
         let role = message.guild.roles.cache.find(r => r.name === "verde");
