@@ -23,9 +23,8 @@ module.exports = {
                     msg.edit("Seus dados cairam em 1 \n Seus dados cairam em 2 \n Seus dados cairam em 3")
                       .then(msg => {
                         setTimeout(function() {
-                          msg
-                            .edit(
-                              "Seus dados cairam em 1 \n Seus dados cairam em 2 \n Seus dados cairam em 3 \n Seus dados cairam em 4"
+                          msg.edit(
+"Seus dados cairam em 1 \n Seus dados cairam em 2 \n Seus dados cairam em 3 \n Seus dados cairam em 4"
                             )
                             .then(msg => {
                               setTimeout(function() {
