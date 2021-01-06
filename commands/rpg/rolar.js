@@ -11,7 +11,6 @@ module.exports = {
       var d20 = Math.floor(Math.random() * 20) + 1;
       var d100 = Math.floor(Math.random() * 100) + 1;
   
-      setTimeout(function() {
       message.channel.send(`Seus dados cairam em d6- ${d6} d20- ${d20} ${d100}`).then(msg => {
         msg.edit("Seus dados cairam em 1").then(msg => {
           msg.edit("Seus dados cairam em 1 \n Seus dados cairam em 2").then(msg => {
@@ -23,7 +22,6 @@ module.exports = {
           })
         })
       });
-    }, 5000)
     }
   };
   
