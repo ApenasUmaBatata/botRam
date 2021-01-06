@@ -1,0 +1,22 @@
+const Discord = require('discord.js');
+module.exports = {
+  config: {
+    name: "cargo",
+    aliases: [""]
+  },
+run: async (bot, message, args) => {
+        if (!args[0]){
+           return message.channel.send(`⠀\n Porfavor escolha uma cor)!\n Modo de uso: Ram jokenpo papel `)
+        }
+        let choices = ['azul', 'verde', 'preto'];
+        if (choices.includes((args[0]).toLowerCase())){
+                if (args[0].toLowerCase() == "azul" ){
+                    .cache.get
+                    return message.channel.send('empate eu tambem tirei pedra')
+                    }                    
+            }
+        } else {
+            return message.channel.send('Porfavor inclua apenas pedra, papel ou tesoura!')
+        }
+    }
+}

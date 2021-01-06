@@ -5,11 +5,11 @@ const falas = require("../../falas.json");
 module.exports = async (bot, message) => {
   if (message.author.bot) return;
   if (message.channel.type === "dm") return;
-
   let responseObject = falas;
   if (responseObject[message.content]) {
     message.channel.send(responseObject[message.content]);
   }
+
 
   let prefix = config.prefix;
   if (
@@ -34,9 +34,9 @@ module.exports = async (bot, message) => {
   let fras = frases[Math.floor(Math.random() * frases.length)]
 
   var args = message.content.substring(config.prefix.length).split(" ");
-  if (!message.content.startsWith(config.prefix).toLowerCase()) return;
+  if (!message.content.startsWith(config.prefix)) return;
   let cmd = args.shift().toLowerCase();
-  if (!message.content.startsWith(prefix).toLowerCase() || message.author.bot) return;
+  if (!message.content.startsWith(prefix) || message.author.bot) return;
   let command = bot.commands.get(cmd) || bot.commands.get(bot.aliases.get(cmd));
   if (command) {
     command.run(bot, message, args);
