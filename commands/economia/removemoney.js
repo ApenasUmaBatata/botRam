@@ -1,0 +1,33 @@
+const Discord = require("discord.js"); // Puxando a livraria Discord.js
+const db = require("quick.db"); // Puxando a Database *Instale utilizando: npm i quick.db
+
+module.exports = {
+  config: {
+    name: "removemoney",
+    aliases: ["-money", ]
+  },
+  run: async (bot, message, args, tools) => {
+  //await message.react("✅");
+
+  if (!message.member.hasPermission("ADMINISTRATOR"))
+    return message.reply(`você precisa da permissão \`ADMNISTRADOR\`.`);
+
+  if (!args[0]) return message.channel.send(`escreva um número`); // caso o usuário não escreva um número
+  if (isNaN(args[0])) return message.channel.send(`NÚMERO!!!!!`); // caso ele escreva algo que não seja um número
+
+  // puxando um membro para quem iremos adicionar
+  let member =
+    message.mentions.users.first() ||
+    message.guild.members.cache.get(args[1]) ||
+    message.author; // caso não mencione ninguém, será ele mesmo
+
+  message.channel.send(
+    `${message.author.username} removeu **🔆 ${
+      args[0]
+    }** moedas sagradas da conta do usuário ${member.username}`
+  );
+  db.subtract(`money_${member.id}`, args[0]); // adicionando na database, a quantia
+}
+}
+
+

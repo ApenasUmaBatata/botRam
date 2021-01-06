@@ -4,7 +4,7 @@ const db = require("quick.db"); // Puxando a Database *Instale utilizando: npm i
 module.exports = {
   config: {
     name: "addmoney",
-    aliases: ["addcoin", "+dinheiro"]
+    aliases: ["addcoin", "+money"]
   },
   run: async (bot, message, args, tools) => {
     //await message.react("✅");
