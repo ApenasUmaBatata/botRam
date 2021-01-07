@@ -33,14 +33,14 @@ module.exports = {
       // caso esse sistema caia em 3, o usuário terá ganhado
 
       message.channel.send(
-        `Você apostou **🔆 ${numeroaposta}** moedas sagradas e **GANHOU**!`
+        `${autor} apostou **🔆 ${numeroaposta}** moedas sagradas e **GANHOU**!`
       ); // fazendo uma conta, puxando o 'money' que o usuário tinha no começo mais o que ele ganhou
       db.add(`money_${message.author.id}`, numeroaposta); // adicionando na conta do usuário o que ele apostou
     } else {
       // caso o número randômico não caia em três (3)
 
       message.channel.send(
-        `Você apostou **🔆 ${numeroaposta}** moedas sagradas e **PERDEU**!`
+        `${autor} apostou **🔆 ${numeroaposta}** moedas sagradas e **PERDEU**!`
       ); // fazendo uma conta, puxando o 'money' que ele começou menos o que ele perdeu na aposta
       db.subtract(`money_${message.author.id}`, numeroaposta); // removendo o que ele apostou
     }
