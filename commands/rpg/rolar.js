@@ -12,18 +12,18 @@ module.exports = {
     var d100 = Math.floor(Math.random() * 100) + 1;
 
     message.channel
-      .send(`Seus dados cairam em d6- ${d6} d20- ${d20} ${d100}`)
+      .send(`Seus dados estão rolando!`)
       .then(msg => {
         setTimeout(function() {
-          msg.edit("Seus dados cairam em 1").then(msg => {
+          msg.edit("Seus dados cairam em:").then(msg => {
             setTimeout(function() {
-              msg.edit("Seus dados cairam em 1 \n Seus dados cairam em 2")
+              msg.edit(`Seus dados cairam em: \n D6 = ${d6} `)
                 .then(msg => {
                   setTimeout(function() {
-                    msg.edit("Seus dados cairam em 1 \n Seus dados cairam em 2 \n Seus dados cairam em 3")
+                    msg.edit(`Seus dados cairam em: \n D6 = ${d6} \n D20 = ${d20}`)
                       .then(msg => {
                         setTimeout(function() {
-                          msg.edit("Seus dados cairam em 1 \n Seus dados cairam em 2 \n Seus dados cairam em 3 \n Seus dados cairam em 4")
+                          msg.edit(`Seus dados cairam em: \n D6 = ${d6} \n D20 = ${d20} \n D100 = ${d100}`)
                             .then(msg => {
                               setTimeout(function() {
                                 msg.edit("Seus dados cairam em 1 \n Seus dados cairam em 2 \n Seus dados cairam em 3 \n Seus dados cairam em 4 \n Seus dados cairam em 5");
