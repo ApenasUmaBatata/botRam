@@ -15,10 +15,10 @@ module.exports = {
       setTimeout(function() {
         msg.edit("Seus dados cairam em:").then(msg => {
           setTimeout(function() {
-            msg.edit(`Seus dados cairam em: \n D6 = ${d6} `).then(msg => {
+            msg.edit(`Seus dados cairam em: \n 🎲D6 = ${d6} `).then(msg => {
               setTimeout(function() {
                 msg
-                  .edit(`Seus dados cairam em: \n D6 = ${d6} \n D20 = ${d20}`)
+                  .edit(`Seus dados cairam em: \n 🎲D6 = ${d6} \n 🎲D20 = ${d20}`)
                   .then(msg => {
                     setTimeout(function() {
                       msg.edit(
