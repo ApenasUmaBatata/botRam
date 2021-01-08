@@ -18,11 +18,12 @@ module.exports = {
       .setColor("RED")
       .setDescription(`${a1} \n ${a2} \n ${a3} \n ${a4}`)
       .setFooter(`Clique em um emoji para deixar sua opinião!`);
-    message.channel.send(embed);
-    //.then(function(msg) {
-    //msg.react("<:like1:795044874515906602>");
-    //msg.react("<:dislike1:795044933605785600>");
-    //});
+    message.channel.send(embed).then(function(msg) {
+    msg.react("<:um:797245701578555474>");
+    msg.react("<:dois:797246681384353802>");
+      msg.react("<:dois:797246681384353802>");
+      msg.react("<:dois:797246681384353802>");
+    });
     message.delete();
   }
 };
