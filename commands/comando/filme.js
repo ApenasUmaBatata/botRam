@@ -21,7 +21,7 @@ module.exports = {
     message.channel.send(embed).then(function(msg) {
     msg.react("<:um:797245701578555474>");
     msg.react("<:dois:797246681384353802>");
-      msg.react("<:dois:797246681384353802>");
+      msg.react("<:tres:797248664011669504>");
       msg.react("<:dois:797246681384353802>");
     });
     message.delete();
