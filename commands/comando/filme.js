@@ -11,7 +11,7 @@ module.exports = {
       let eb = new Discord.MessageEmbed()
         .setThumbnail(bicon)
         .setDescription(
-          `\`Passando pra avisar que voce usou o comando de modo incorreto! Uma sugestão de como usar:\`\n \`Ram sfilme bob-esponja moranguinho vovo-zona o-bom-dinossauro\` \n \`=========================== \` \n \`OBS-1: filmes que contenham nome composto, usar ao invés de "espaço" colocar -\` \n \`OBS-2: na troca de um filme para o outro usar "espaço"\` \n \`OBS-3: Limite máximo de 4 filmes!\``
+          `\`Passando pra avisar que voce usou o comando de modo incorreto! Uma sugestão de como usar:\` \n \`=========================== \` \n \`Ram sfilme bob-esponja moranguinho vovo-zona o-bom-dinossauro\` \n \`=========================== \` \n \`OBS-1: filmes que contenham nome composto, usar ao invés de "espaço" colocar -\` \n \`OBS-2: na troca de um filme para o outro usar "espaço"\` \n \`OBS-3: Limite máximo de 4 filmes!\``
         );
       return message.channel.send(eb);
       message.delete();
