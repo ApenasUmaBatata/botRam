@@ -16,11 +16,11 @@ module.exports = {
     let embed = new Discord.MessageEmbed()
       .setTitle(`Filmes sugeridos:`)
       .setColor("RED")
-      .setDescription(`${a1} \n ${a2} \n ${a3} \n ${a4}`)
+      .setDescription(` <:um:797245701578555474>- ${a1} \n <:dois:797246681384353802>- ${a2} \n <:tres:797248664011669504>- ${a3} \n ${a4}`)
       .setFooter(`Clique em um emoji para deixar sua opinião!`);
     message.channel.send(embed).then(function(msg) {
-    msg.react("<:um:797245701578555474>");
-    msg.react("<:dois:797246681384353802>");
+      msg.react("<:um:797245701578555474>");
+      msg.react("<:dois:797246681384353802>");
       msg.react("<:tres:797248664011669504>");
       msg.react("<:dois:797246681384353802>");
     });
