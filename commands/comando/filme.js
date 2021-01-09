@@ -6,7 +6,7 @@ module.exports = {
   },
   run: async (bot, message, args) => {
     if (!args[0]) {
-      return message.channel.send(``);
+      return message.channel.send(`Exemplo de uso: \n Ram sfilme bob_esponja moranguinho vovo_zona o_bom_dinossauro \n *OBS*: filmes que `);
     }
     var a1 = args[0];
     var a2 = args[1];
