@@ -10,7 +10,7 @@ module.exports = async (bot, message) => {
     message.channel.send(responseObject[message.content]);
   }
 
-let pref = ["Ram","oi"]
+
   let prefix = config.prefix;
   if (
     message.content === "Ram" ||
