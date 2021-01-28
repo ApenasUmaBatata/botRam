@@ -29,11 +29,6 @@ module.exports = {
     if (a4=== undefined) {
       a4 = "oi"
     }
-    if (a2=== undefined) {
-      a2 = "oi"
-    }
-
-
     let embed = new Discord.MessageEmbed()
       .setTitle(`Filmes sugeridos:`)
       .setColor("RED")
