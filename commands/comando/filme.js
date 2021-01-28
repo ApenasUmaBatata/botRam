@@ -29,22 +29,14 @@ module.exports = {
     if (a4 === undefined) {
       a4 = "_não selecionado_"
     }
-    
-    var d = new Date,
-    dformat = [(d.getMonth()+1),
-               d.getDate(),
-               d.getFullYear()].join('/') +' ' +
-              [d.getHours(),
-               d.getMinutes(),
-               d.getSeconds()].join(':');
-    
+
     let embed = new Discord.MessageEmbed()
-      .setTitle(`Filmes sugeridos: ${d}`)
+      .setTitle(`Filmes sugeridos:`)
       .setColor("RED")
       .setDescription(
         ` <:um:797245701578555474>- ${a1} \n <:dois:797246681384353802>- ${a2} \n <:tres:797248664011669504>- ${a3} \n <:quatro:797279343855796244>- ${a4}`
       )
-      .setFooter(`Clique em um emoji para deixar sua opinião!`)
+      .setFooter(`Clique em um emoji para deixar sua opinião!`);
     message.channel.send(embed).then(function(msg) {
       msg.react("<:um:797245701578555474>");
       msg.react("<:dois:797246681384353802>");
