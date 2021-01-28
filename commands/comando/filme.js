@@ -21,13 +21,13 @@ module.exports = {
     var a3 = args[2];
     var a4 = args[3];
     if (a2 === undefined) {
-      a2 = "oi"
+      a2 = " "
     }
     if (a3 === undefined) {
-      a3 = "oi"
+      a3 = " "
     }
     if (a4 === undefined) {
-      a4 = "oi"
+      a4 = " "
     }
     let embed = new Discord.MessageEmbed()
       .setTitle(`Filmes sugeridos:`)
