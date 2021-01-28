@@ -20,7 +20,11 @@ module.exports = {
     var a2 = args[1];
     var a3 = args[2];
     var a4 = args[3];
-     var filme = args.slice(" ").join(" ")
+    if (args[0]=== null) {
+      bot = "Sim";
+    } else {
+      bot = "Não";
+    }
 
     let embed = new Discord.MessageEmbed()
       .setTitle(`Filmes sugeridos:`)
