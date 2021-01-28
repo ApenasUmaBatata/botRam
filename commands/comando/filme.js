@@ -31,21 +31,20 @@ module.exports = {
     }
     
     var d = new Date,
-    dformat = [(d.getMonth()+1).padLeft(),
-               d.getDate().padLeft(),
+    dformat = [(d.getMonth()+1),
+               d.getDate(),
                d.getFullYear()].join('/') +' ' +
-              [d.getHours().padLeft(),
-               d.getMinutes().padLeft(),
-               d.getSeconds().padLeft()].join(':');
+              [d.getHours(),
+               d.getMinutes(),
+               d.getSeconds()].join(':');
     
     let embed = new Discord.MessageEmbed()
-      .setTitle(`Filmes sugeridos:`)
+      .setTitle(`Filmes sugeridos: ${d}`)
       .setColor("RED")
       .setDescription(
         ` <:um:797245701578555474>- ${a1} \n <:dois:797246681384353802>- ${a2} \n <:tres:797248664011669504>- ${a3} \n <:quatro:797279343855796244>- ${a4}`
       )
       .setFooter(`Clique em um emoji para deixar sua opinião!`)
-      .setTimestamp(d);
     message.channel.send(embed).then(function(msg) {
       msg.react("<:um:797245701578555474>");
       msg.react("<:dois:797246681384353802>");
