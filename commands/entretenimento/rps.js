@@ -6,7 +6,7 @@ module.exports = {
   },
 run: async (bot, message, args) => {
         if (!args[0]){
-           return message.channel.send(`⠀\n Porfavor inclua sua escolha (pedra, papel ou tesoura)!\n Modo de uso: Ram jokenpo papel `)
+           return message.channel.send(`⠀\n Por favor inclua sua escolha (pedra, papel ou tesoura)!\n Modo de uso: Ram jokenpo papel `)
         }
         let choices = ['pedra', 'papel', 'tesoura'];
         if (choices.includes((args[0]).toLowerCase())){
@@ -45,7 +45,7 @@ run: async (bot, message, args) => {
                         }
             }
         } else {
-            return message.channel.send('Porfavor inclua apenas pedra, papel ou tesoura!')
+            return message.channel.send('Por favor inclua apenas pedra, papel ou tesoura!')
         }
     }
 }
