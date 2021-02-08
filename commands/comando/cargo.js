@@ -5,22 +5,22 @@ module.exports = {
     aliases: [""]
   },
   run: async (bot, message, args) => {
+    let choices = [
+      "verde",
+      " azul",
+      " vermelho",
+      " rosa",
+      " amarelo",
+      " roxo",
+      " preto",
+      " branco"
+    ];
     if (!args[0]) {
-      return message.channel.send(`Por favor escolha uma cor!`);
+      return message.channel.send(`Por favor escolha uma cor! ${choices}`);
     }
 
     const user = message.author.username;
     const cor = args[0];
-    let choices = [
-      "verde",
-      "azul",
-      "vermelho",
-      "rosa",
-      "amarelo",
-      "roxo",
-      "preto",
-      "branco"
-    ];
       if (args[0].toLowerCase() == "verde") {
         let role = message.guild.roles.cache.find(r => r.name === "verde");
         message.member.roles.add(role);
