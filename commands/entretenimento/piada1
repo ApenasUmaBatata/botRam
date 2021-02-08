@@ -1,14 +1,14 @@
 const Discord = require("discord.js");
-const db = require
+const db = require("quick.db")
 module.exports = {
   config: {
     name: "piada",
     aliases: ["piadas", "fun"]
   },
   run: async (bot, message, args, member) => {
-      let entrada = db.get(`wcmessag_${member.guild.id}`);
+      let fra = db.get(`frase_${member.guild.id}`);
 
 
-    message.channel.send();
+    message.channel.send(fra);
   }
 };
