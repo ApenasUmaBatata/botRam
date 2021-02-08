@@ -19,9 +19,10 @@ module.exports = {
     
     var ar = args.slice(1).join(" ");
     
-    db.add(`frase_${message.guild.id}`, ar);
+    db.set(`frase_${message.guild.id}`, ar)
     
-    
+        message.channel.send(`sua frase foi adicionada`)  
+
 
   }
 }
