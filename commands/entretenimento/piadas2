@@ -1,19 +1,11 @@
 const Discord = require("discord.js");
+onst db = require("quick.db");
 module.exports = {
   config: {
-    name: "piada",
-    aliases: ["piadas", "fun"]
+    name: "addpiada",
+    aliases: ["apiada"]
   },
   run: async (bot, message, args, member) => {
 
-    var list = [
-        "oi"
-
-    ]
-
-
-    let altstatus = list[Math.floor(Math.random() * list.length)];
-
-    message.channel.send(altstatus);
   }
 }
