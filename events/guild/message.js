@@ -3,15 +3,18 @@ const config = require("../../config.json");
 const falas = require("../../falas.json");
 
 module.exports = async (bot, message) => {
+// se o author for bot ou a mensagem for DM o bot nao responderá
   if (message.author.bot) return;
   if (message.channel.type === "dm") return;
+// puxando o arquivo falas para que o bot responda quando uma certa mensagem (escrita pela pessoa e programada no bot) seja respondia (exemplo: pessoa: oi bot: oi)
   let responseObject = falas;
   if (responseObject[message.content]) {
     message.channel.send(responseObject[message.content]);
   }
 
+  let prefix = config.prefix; //puxando prefixo do bot
 
-  let prefix = config.prefix;
+  //se o bot for marcado @Ram ela respondera com uma mensagem
   if (
     message.content === "Ram" ||
     message.content === "<@!705547264537657465>"
@@ -27,12 +30,15 @@ module.exports = async (bot, message) => {
       );
     message.channel.send(embed);
   }
+
+  //se o comando nao for existente na lita do bot, ele ira enviar uma mensagem aleatoria falando que nao existe o comando
   const frases = [
     `Não reconheci esse comando, de uma olhada em \`${prefix} comandos\`!`,
     `Esse comando pode não existir, de um olhada em \`${prefix} comandos\`!`,
   ]
   let fras = frases[Math.floor(Math.random() * frases.length)]
 
+  //puxando o prefixo para quando uma mensagem for mandada com ele e com comando existente, o bot irá esponder a menssagem com o comando
   var args = message.content.substring(config.prefix.length).split(" ");
   if (!message.content.startsWith(config.prefix)) return;
   let cmd = args.shift().toLowerCase();
