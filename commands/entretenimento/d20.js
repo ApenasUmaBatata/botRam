@@ -4,14 +4,14 @@ module.exports = {
     aliases: ["dado20"]
   },
   run: async (bot, message, args) => {
-    //await message.react("✅"); // setando a base
+    //await message.react("✅");
 
-    // puxando um chao, com sistema randomico (de 6 a 1)
+    // puxando um numero randomico que pode cair de 1 a 20 (como um dado de 20 lados)
     var numero = Math.floor(Math.random() * 20) + 1;
 
     message.channel.send(`Você jogou o dado e...`).then(message => {
       setTimeout(function() {
-        message.edit(`⠀\n Ele caiu em: ${numero}`);
+        message.edit(`⠀\n Ele caiu em: ${numero}`); //enviando a mensagem e em 3 segundos editando para o resultado
       }, 3000);
     });
   }
