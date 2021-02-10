@@ -14,18 +14,19 @@ module.exports = {
       " roxo",
       " preto",
       " branco"
-    ];
+    ]; //criando uma lista de escolhas de cargos pra mandar em lista no chat 
     if (!args[0]) {
       return message.channel.send(`Por favor escolha uma cor! ${choices}`);
     }
+    // se o a pessoa nao escolher nenhuma cor, ou o comando estiver vazio (exemplo: Ram cargo )o bot ira responder com a mensagem a cima
 
-    const user = message.author.username;
-    const cor = args[0];
+    const user = message.author.username; //puxando o username do altor para mandar junto a mensagem
+    const cor = args[0]; //puxando o argumento da cor (vermelho e afins)
       if (args[0].toLowerCase() == "verde") {
-        let role = message.guild.roles.cache.find(r => r.name === "verde");
-        message.member.roles.add(role);
-        message.delete();
-        return message.channel.send(`${user} voce ganhou a cor ${cor}!`);
+        let role = message.guild.roles.cache.find(r => r.name === "verde"); //procurando o cargo na lista de cargos do servidor (o cargo tem que ser criado no servidor)
+        message.member.roles.add(role); //setando o cargo escolhido
+        message.delete(); //apagando a mensagem do autor
+        return message.channel.send(`${user} voce ganhou a cor ${cor}!`); //mandando no chat a cor que a pessoa escolheu
       }
       if (args[0].toLowerCase() == "azul") {
         let role = message.guild.roles.cache.find(r => r.name === "azul");
@@ -69,6 +70,7 @@ module.exports = {
         message.delete();
         return message.channel.send(`${user} voce ganhou a cor ${cor}!`);
       }
+      //se na mensagem conter algo que nao tenha em "choices" o bot irá responder com a seguinte mensagem
      else {
       message.delete();
       return message.channel.send(

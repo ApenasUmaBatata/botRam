@@ -5,21 +5,25 @@ module.exports = {
     aliases: [""]
   },
   run: async (bot, message, args) => {
-    let bicon = bot.user.displayAvatarURL();
+    let bicon = bot.user.displayAvatarURL(); //puxando a foto de perfil do bot
 
     if (!args[0]) {
-      let eb = new Discord.MessageEmbed()
+      let eb = new Discord.MessageEmbed() //criando uma pequena embed
         .setThumbnail(bicon)
         .setDescription(
           `\`Passando pra avisar que voce usou o comando de modo incorreto! Uma sugestão de como usar:\` \n \`=========================== \` \n \`Ram sfilme bob-esponja moranguinho vovo-zona o-bom-dinossauro\` \n \`=========================== \` \n \`OBS-1: filmes que contenham nome composto, usar ao invés de "espaço" colocar -\` \n \`OBS-2: na troca de um filme para o outro usar "espaço"\` \n \`OBS-3: Limite máximo de 4 filmes!\``
-        );
-      return message.channel.send(eb);
+        );//caso a pessoa nao coloque nada na mensagem (exemplo: Ram sfilme ) o bot ira retornar essa mensagem
+      return message.channel.send(eb); //retornado a embed em caso de mensagem vazia
 
     }
+    //pegando os arugmentos para sugestão do filme
+    //OBS: quando o filme possui duplo argumento (os simpsons) usar - no lugar do "espaço"
     var a1 = args[0];
     var a2 = args[1];
     var a3 = args[2];
     var a4 = args[3];
+
+    // caso os argumentos a2 + estejam em branco, invez do bot mandar "undefined" ele irá mandar "nao selecionado"
     if (a2 === undefined) {
       a2 = "_não selecionado_"
     }
@@ -29,20 +33,20 @@ module.exports = {
     if (a4 === undefined) {
       a4 = "_não selecionado_"
     }
-
+//criando uma embed para colocar os filmes listado
     let embed = new Discord.MessageEmbed()
       .setTitle(`Filmes sugeridos:`)
       .setColor("RED")
       .setDescription(
-        ` <:um:797245701578555474>- ${a1} \n <:dois:797246681384353802>- ${a2} \n <:tres:797248664011669504>- ${a3} \n <:quatro:797279343855796244>- ${a4}`
+        ` <:um1:809185254887784499>- ${a1} \n <:dois2:809185285086642208>- ${a2} \n <:tres3:809185310851989564>- ${a3} \n <:quatro4:809185331890618379>- ${a4}`
       )
       .setFooter(`Clique em um emoji para deixar sua opinião!`);
     message.channel.send(embed).then(function(msg) {
-      msg.react("<:um:797245701578555474>");
-      msg.react("<:dois:797246681384353802>");
-      msg.react("<:tres:797248664011669504>");
-      msg.react("<:quatro:797279343855796244>");
+      msg.react("<:um1:809185254887784499>"); //enviando a embed e reagindo na mensagem com os emojis para votação
+      msg.react("<:dois2:809185285086642208>");
+      msg.react("<:tres3:809185310851989564>");
+      msg.react("<:quatro4:809185331890618379>");
     });
-    message.delete();
+    message.delete();//apagando a mensagem do autor
   }
 };
