@@ -19,54 +19,53 @@ module.exports = {
       return message.channel.send(`Por favor escolha uma cor! ${choices}`);
     }
     // se o a pessoa nao escolher nenhuma cor, ou o comando estiver vazio (exemplo: Ram cargo )o bot ira responder com a mensagem a cima
-
     const user = message.author.username; //puxando o username do altor para mandar junto a mensagem
     const cor = args[0]; //puxando o argumento da cor (vermelho e afins)
       if (args[0].toLowerCase() == "verde") {
-        let role = message.guild.roles.cache.find(r => r.name === "verde"); //procurando o cargo na lista de cargos do servidor (o cargo tem que ser criado no servidor)
-        message.member.roles.add(role); //setando o cargo escolhido
+        let cargo = message.guild.roles.cache.find(r => r.name === "verde"); //procurando o cargo na lista de cargos do servidor (o cargo tem que ser criado no servidor)
+        message.member.roles.add(cargo); //setando o cargo escolhido
         message.delete(); //apagando a mensagem do autor
         return message.channel.send(`${user} voce ganhou a cor ${cor}!`); //mandando no chat a cor que a pessoa escolheu
       }
       if (args[0].toLowerCase() == "azul") {
-        let role = message.guild.roles.cache.find(r => r.name === "azul");
-        message.member.roles.add(role);
+        let cargo = message.guild.roles.cache.find(r => r.name === "azul");
+        message.member.roles.add(cargo);
         message.delete();
         return message.channel.send(`${user} voce ganhou a cor ${cor}!`);
       }
       if (args[0].toLowerCase() == "vermelho") {
-        let role = message.guild.roles.cache.find(r => r.name === "vermelho");
-        message.member.roles.add(role);
+        let cargo = message.guild.roles.cache.find(r => r.name === "vermelho");
+        message.member.roles.add(cargo);
         message.delete();
         return message.channel.send(`${user} voce ganhou a cor ${cor}!`);
       }
       if (args[0].toLowerCase() == "rosa") {
-        let role = message.guild.roles.cache.find(r => r.name === "rosa");
-        message.member.roles.add(role);
+        let cargo = message.guild.roles.cache.find(r => r.name === "rosa");
+        message.member.roles.add(cargo);
         message.delete();
         return message.channel.send(`${user} voce ganhou a cor ${cor}!`);
       }
       if (args[0].toLowerCase() == "amarelo") {
-        let role = message.guild.roles.cache.find(r => r.name === "amarelo");
-        message.member.roles.add(role);
+        let cargo = message.guild.roles.cache.find(r => r.name === "amarelo");
+        message.member.roles.add(cargo);
         message.delete();
         return message.channel.send(`${user} voce ganhou a cor ${cor}!`);
       }
       if (args[0].toLowerCase() == "roxo") {
-        let role = message.guild.roles.cache.find(r => r.name === "roxo");
-        message.member.roles.add(role);
+        let cargo = message.guild.roles.cache.find(r => r.name === "roxo");
+        message.member.roles.add(cargo);
         message.delete();
         return message.channel.send(`${user} voce ganhou a cor ${cor}!`);
       }
       if (args[0].toLowerCase() == "preto") {
-        let role = message.guild.roles.cache.find(r => r.name === "preto");
-        message.member.roles.add(role);
+        let cargo = message.guild.roles.cache.find(r => r.name === "preto");
+        message.member.roles.add(cargo);
         message.delete();
         return message.channel.send(`${user} voce ganhou a cor ${cor}!`);
       }
       if (args[0].toLowerCase() == "branco") {
-        let role = message.guild.roles.cache.find(r => r.name === "branco");
-        message.member.roles.add(role);
+        let cargo = message.guild.roles.cache.find(r => r.name === "branco");
+        message.member.roles.add(cargo);
         message.delete();
         return message.channel.send(`${user} voce ganhou a cor ${cor}!`);
       }
