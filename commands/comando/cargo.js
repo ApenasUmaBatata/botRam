@@ -5,8 +5,6 @@ module.exports = {
     aliases: [""]
   },
   run: async (bot, message, args) => {
-
-    let cargos = message.member.roles.cache.some(r=>["verde", "azul", "vermelho", "rosa"].includes(r.name))
     let choices = [
       "verde",
       " azul",
@@ -26,7 +24,7 @@ module.exports = {
     const cor = args[0]; //puxando o argumento da cor (vermelho e afins)
       if (args[0].toLowerCase() == "verde") {
         let role = message.guild.roles.cache.find(r => r.name === "verde"); //procurando o cargo na lista de cargos do servidor (o cargo tem que ser criado no servidor)
-        message.member.roles.add(cargos); //setando o cargo escolhido
+        message.member.roles.add(role); //setando o cargo escolhido
         message.delete(); //apagando a mensagem do autor
         return message.channel.send(`${user} voce ganhou a cor ${cor}!`); //mandando no chat a cor que a pessoa escolheu
       }
