@@ -10,15 +10,15 @@ module.exports = {
     //await message.react("✅");
 
     if (
-      !message.member.hasPermission("ADMINISTRATOR") &&
-      message.author.id != "691447707134328832"
+      !message.member.hasPermission("ADMINISTRATOR") && //bloqueando comando para administrador (e o ID é para alguma outra pessoa, entao pode remover do && pra frente)
+      message.author.id != "id"
     ) {
       return message.reply(
-        `você precisa da permissão \`Gerenciar Mensagens\`.`
+        `você precisa da permissão \`Administrador\`.`
       );
-      //seu codigo
     }
-    if (!args[0]) return message.channel.send(`Você não especificou o tempo!`);
+    if (!args[0]) return message.channel.send(`Modo correto de uso! \n Ram sorteio {tempo} {#canal} {item do sorteio} \n Exemplo: Ram sorteio 1m #conversa chocolate`);
+    //puxando argumentos para definir o tempo
     if (
       !args[0].endsWith("d") &&
       !args[0].endsWith("h") &&
@@ -44,22 +44,22 @@ module.exports = {
       .setDescription(
         `O membro: ${message.author} \n Está sorteando: **${prize}**`
       )
-      .setTimestamp(Date.now() + ms(args[0]))
+      .setTimestamp(Date.now() + ms(args[0])) //puxando o numero que a pessoa ssolicitou e definindo o tempo exemplo 1m = o sorteio será realizado em 1 minuto
       .setColor(`BLUE`);
     let m = await channel.send(Embed);
     m.react("🎉");
     setTimeout(() => {
       if (m.reactions.cache.get("🎉").count <= 1) {
-        message.channel.send(`Reactions: ${m.reactions.cache.get("🎉").count}`);
+        message.channel.send(`Reactions: ${m.reactions.cache.get("🎉").count}`); //puxando as reações da imagem
         return message.channel.send(
-          `Não houve pessoas suficientes para realizar o sorteio!`
+          `Não houve pessoas suficientes para realizar o sorteio!` //caso nao tenha nenhuma reação de pessoa, o bot retornara essa mensagem
         );
       }
 
       let winner = m.reactions.cache
         .get("🎉")
         .users.cache.filter(u => !u.bot)
-        .random();
+        .random(); //puxando o ganhador de maneira aleatória conforme as reações
       channel.send(`O ganhador do \`${prize}\` foi ${winner}`);
     }, ms(args[0]));
   }
