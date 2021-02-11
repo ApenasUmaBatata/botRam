@@ -13,7 +13,10 @@ module.exports = {
       "https://cdn.nekos.life/hug/hug_026.gif",
       "https://i.pinimg.com/originals/4d/89/d7/4d89d7f963b41a416ec8a55230dab31b.gif",
       "https://media.tenor.com/images/eed8d1a51f647b4be696879a0ad6f1f1/tenor.gif",
-      "https://pa1.narvii.com/7002/0d18a2a7c78f4dad44fe1498573c206916d808a0r1-444-250_hq.gif"
+      "https://pa1.narvii.com/7002/0d18a2a7c78f4dad44fe1498573c206916d808a0r1-444-250_hq.gif",
+      "https://media.giphy.com/media/l4FGpP4lxGGgK5CBW/giphy.gif",
+      "https://media.giphy.com/media/gnXG2hODaCOru/giphy.gif",
+      "https://media.giphy.com/media/EvYHHSntaIl5m/giphy.gif"
     ];
 
     let img = image[Math.floor(Math.random() * image.length)];//randomizando a variael de gifs para que caia um aleatorio cada vez que o comando for usado
