@@ -14,14 +14,12 @@ module.exports = {
       " roxo",
       " preto",
       " branco"
-    ]; //criando uma lista de escolhas de cargos pra mandar em lista no chat  
+    ]; //criando uma lista de escolhas de cargos pra mandar em lista no chat 
     if (!args[0]) {
       return message.channel.send(`Por favor escolha uma cor! ${choices}`);
     }
     // se o a pessoa nao escolher nenhuma cor, ou o comando estiver vazio (exemplo: Ram cargo )o bot ira responder com a mensagem a cima
     const user = message.author.username; //puxando o username do altor para mandar junto a mensagem
-    if (cargo === choices)
-      return message.channel.send(` ${user} você já tem um cargo de cor!`);
     const cor = args[0]; //puxando o argumento da cor (vermelho e afins)
       if (args[0].toLowerCase() == "verde") {
         let cargo = message.guild.roles.cache.find(r => r.name === "verde"); //procurando o cargo na lista de cargos do servidor (o cargo tem que ser criado no servidor)
