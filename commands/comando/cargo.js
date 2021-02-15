@@ -15,6 +15,8 @@ module.exports = {
       " preto",
       " branco"
     ]; //criando uma lista de escolhas de cargos pra mandar em lista no chat 
+    if (cargo === choices)
+      return message.channel.send(` ${autor} você já trabalha como 🐴 Domador!`); 
     if (!args[0]) {
       return message.channel.send(`Por favor escolha uma cor! ${choices}`);
     }
