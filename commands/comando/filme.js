@@ -33,10 +33,13 @@ module.exports = {
     if (a4 === undefined) {
       a4 = "_não selecionado_"
     }
+    let bicon = bot.user.displayAvatarURL(); //puxando foto do bot para mandar junto com a mensagem
+
 //criando uma embed para colocar os filmes listado
     let embed = new Discord.MessageEmbed()
       .setTitle(`Filmes/Jogos sugeridos:`)
       .setColor("RED")
+      .setThumbnail(bicon)
       .setDescription(
         ` <:um1:809185254887784499>- ${a1} \n <:dois2:809185285086642208>- ${a2} \n <:tres3:809185310851989564>- ${a3} \n <:quatro4:809185331890618379>- ${a4} \n ||@everyone||`
       )
