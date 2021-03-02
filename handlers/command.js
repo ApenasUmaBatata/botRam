@@ -12,5 +12,5 @@ module.exports = bot => {
         pull.config.aliases.forEach(a => bot.aliases.set(a, pull.config.name));
     }
   };
-  ["comando", "entretenimento", "administração", "economia", "rpg"].forEach(x => load(x));
+  ["comando", "entretenimento", "administração", "rpg"].forEach(x => load(x));
 };
