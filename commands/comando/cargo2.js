@@ -1,7 +1,7 @@
 const Discord = require("discord.js");
 module.exports = {
   config: {
-    name: "cargo2",
+    name: "cargo",
     aliases: [""]
   },
   run: async (bot, message, args) => {
