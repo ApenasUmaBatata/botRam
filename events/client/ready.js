@@ -1,10 +1,10 @@
 module.exports = async bot => {
-  console.log("O bot acordou");
-
+  console.log("O bot acordou");  
+  
   let statuses = [
     { name: "Re:Zero-Starting Life in Another World", type: "WATCHING" },
-    { name: "Minecraft", type: "PLAYING" },
-    { name: "Labrinth", type: "LISTENING" },
+    { name: "Junte-se a nós: discord.gg/PYtevP5NZn", type: "WATCHING" },
+    { name: "discord.gg/PYtevP5NZn", type: "STREAMING" , url:"https://www.twitch.tv/srbatataoz"}
   ];
 
   setInterval(function() {
