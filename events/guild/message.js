@@ -1,24 +1,29 @@
 const Discord = require("discord.js");
 const config = require("../../config.json");
-const falas = require("../../falas.json");
 
 module.exports = async (bot, message) => {
 // se o author for bot ou a mensagem for DM o bot nao responderá
   if (message.author.bot) return;
   if (message.channel.type === "dm") return;
 
-  
-// puxando o arquivo falas para que o bot responda quando uma certa mensagem (escrita pela pessoa e programada no bot) seja respondia (exemplo: pessoa: oi bot: oi)
-//OBS1: fazendo explicação aqui do arquivo falas.json, ao lado esquerdo é a mensagem do player (bom dia) ao lado direito a resposta do bot (bom dia amigos) assim para qualquer mensagem que voce colcoar lá
-//OBS2: a mensagem enviada pelo autor devera ser igual a escrita no comando exemplo : comando paraleLePipedo autor: paraleLePipedo, essa mensagem nao precisam do uso de prefixo!
-  let responseObject = falas;
-  if (responseObject[message.content]) {
-    message.channel.send(responseObject[message.content]);
+  //caso o membro escreva Bom dia/tarde/noite no chat o bot irá responder------------
+  if (message.content.toLowerCase() == 'bom dia') {
+    const aut = message.author;
+  message.channel.send(`Bom dia ${aut}`);
+}
+  if (message.content.toLowerCase() == 'boa tarde') {
+    const aut = message.author;
+  message.channel.send(`Boa tarde ${aut}`);
+}
+  if (message.content.toLowerCase() == 'boa noite') {
+    const aut = message.author;
+  message.channel.send(`Boa noite ${aut}`);
   }
+ //------------------------------------
 
   let prefix = config.prefix; //puxando prefixo do bot
 
-  //se o bot for marcado @Ram ela respondera com uma mensagem
+  //se o bot for marcado @Ram ou a palavra Ram for escrita ela respondera com uma mensagem
   if (
     message.content === "Ram" ||
     message.content === "<@!705547264537657465>"
@@ -35,7 +40,7 @@ module.exports = async (bot, message) => {
     message.channel.send(embed);//enviando embed de resposta sobre a marcação dela
   }
 
-  //se o comando nao for existente na lita do bot, ele ira enviar uma mensagem aleatoria falando que nao existe o comando
+  //se o comando nao existir na lista do bot, ele ira enviar uma mensagem aleatoria falando que nao existe o comando
   const frases = [
     `Não reconheci esse comando, de uma olhada em \`${prefix} comandos\`!`,
     `Esse comando pode não existir, de um olhada em \`${prefix} comandos\`!`,
