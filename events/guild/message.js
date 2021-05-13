@@ -24,19 +24,14 @@ module.exports = async (bot, message) => {
   let prefix = config.prefix; //puxando prefixo do bot
 
   //se o bot for marcado @Ram ou a palavra Ram for escrita ela respondera com uma mensagem
-  if (
-    message.content === "Ram" ||
-    message.content === "<@!705547264537657465>"
-  ) {
+  if (message.content === "Ram" || message.content === "<@!705547264537657465>") {
     let bicon = bot.user.displayAvatarURL();
     const embed = new Discord.MessageEmbed()//criando uma embed
       .setThumbnail(bicon)
       .setFooter(message.author.username, message.author.displayAvatarURL())
       .setTitle("Você está perdido? Estou aqui para te ajudar!")
       .setColor("#9F7DD3")
-      .setDescription(
-        `Olá jovem guerreiro, estava em minha caminhada matinal e escutei por seus gritos, se estiver perdido use \`${prefix}ajuda\`. Lembrando, uma viagem pode ser muito perigosa se você estiver sozinho!`
-      );
+      .setDescription(`Olá jovem guerreiro, estava em minha caminhada matinal e escutei por seus gritos, se estiver perdido use \`${prefix}ajuda\`. Lembrando, uma viagem pode ser muito perigosa se você estiver sozinho!`);
     message.channel.send(embed);//enviando embed de resposta sobre a marcação dela
   }
 
