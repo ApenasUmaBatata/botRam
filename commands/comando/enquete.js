@@ -5,7 +5,7 @@ module.exports = {
     name: "enquete",
     aliases: ["Enquete"]
   },
-  run: async (bot, message, args) => {
+  run: async (message, args) => {
     //await message.react("✅");
 
     // var canal = client.channels.get('692026509841662073')

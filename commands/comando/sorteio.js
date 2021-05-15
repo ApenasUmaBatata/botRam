@@ -6,7 +6,7 @@ module.exports = {
     name: "give",
     aliases: ["giveaway", "sorteio"]
   },
-  run: async (bot, message, args) => {
+  run: async (message, args) => {
     //await message.react("✅");
 
     if (

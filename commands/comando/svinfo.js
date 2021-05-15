@@ -4,7 +4,7 @@ module.exports = {
     name: "svinfo",
     aliases: ["serverinfo", "servidor"]
   },
-  run: async (bot, message, args) => {
+  run: async (message) => {
     //await message.react("✅");
 
     let inline = true;

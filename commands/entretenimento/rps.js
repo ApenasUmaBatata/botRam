@@ -4,7 +4,7 @@ module.exports = {
     name: "ppt",
     aliases: ["jokenpo", "rps"]
   },
-run: async (bot, message, args) => {
+run: async (message, args) => {
     //se a pessoa deixar o argumento 0 em branco a seguinte mensagem será enviada
         if (!args[0]){
            return message.channel.send(`⠀\n Por favor inclua sua escolha (pedra, papel ou tesoura)!\n Modo de uso: Ram jokenpo papel `)

@@ -4,7 +4,7 @@ module.exports = {
     name: "abraçar",
     aliases: ["hug"]
   },
-  run: async (bot, message, args, tools) => {
+  run: async (message) => {
     //await message.react("✅");
     if (!message.mentions.users.first()) //puxano a menção do autor
       return message.channel.send("Mencione alguém para receber seu carinhoso abraço!");//caso o autor nao mencione ninguem o bot mandara essa mensagem

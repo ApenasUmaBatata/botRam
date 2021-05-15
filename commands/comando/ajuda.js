@@ -5,7 +5,7 @@ module.exports = {
     name: "ajuda",
     aliases: ["comandos", "help"]
   },
-  run: async (bot, message, args) => {
+  run: async (bot, message) => {
     //await message.react("✅");
     let prefix = config.prefix;
     let bicon = bot.user.displayAvatarURL();

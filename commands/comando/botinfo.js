@@ -4,7 +4,7 @@ module.exports = {
     name: "botinfo",
     aliases: ["info", "on", "convite", "invite", "bot", "ping"]
   },
-  run: async (bot, message, args) => {
+  run: async (bot, message) => {
     //await message.react("✅");
 
     let dias = 0; // variavel para definir dias
