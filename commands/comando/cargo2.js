@@ -62,7 +62,7 @@ module.exports = {
           message.guild.roles.create({
             data: {
               name: "verde",
-              color: "#43ec0a",
+              color: "#28dd30",
               permissions: [
                 "ADD_REACTIONS",
                 "VIEW_CHANNEL",
