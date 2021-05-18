@@ -2,5 +2,5 @@
 .config
 .bash_history
 node_modules
-.tmp.drivedownload
 package-lock.json
+.tmp.drivedownload
