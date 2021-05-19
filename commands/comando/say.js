@@ -5,7 +5,7 @@ module.exports = {
     name: "say",
     aliases: ["acc", "announcement", "falar"]
   },
-  run: async (message, args) => {
+  run: async (bot, message, args) => {
     if (!message.member.hasPermission(["ADMINISTRATOR"])) {
       return message.reply(`Esse comando é apenas para \`Administradores\`.`);
     }
