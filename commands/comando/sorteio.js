@@ -6,44 +6,28 @@ module.exports = {
     name: "give",
     aliases: ["giveaway", "sorteio"]
   },
-  run: async (message, args) => {
+  run: async (bot, message, args) => {
     //await message.react("✅");
 
-    if (
-      !message.member.hasPermission("ADMINISTRATOR") && //bloqueando comando para administrador (e o ID é para alguma outra pessoa, entao pode remover do && pra frente)
-      message.author.id != "id"
-    ) {
-      return message.reply(
-        `você precisa da permissão \`Administrador\`.`
-      );
+    //bloqueando comando para administrador (e o ID é para alguma outra pessoa, entao pode remover do && pra frente)
+    if (!message.member.hasPermission("ADMINISTRATOR")) {
+      return message.reply(`você precisa da permissão \`Administrador\`.`);
     }
     if (!args[0]) return message.channel.send(`Modo correto de uso! \n Ram sorteio {tempo} {#canal} {item do sorteio} \n Exemplo: Ram sorteio 1m #conversa chocolate`);
     //puxando argumentos para definir o tempo
-    if (
-      !args[0].endsWith("d") &&
-      !args[0].endsWith("h") &&
-      !args[0].endsWith("m")
-    )
-      return message.channel.send(
-        `Você nâo usou o tempo de forma correta \n **d = dia** \n **h = hora** \n **m = minuto**`
-      );
+    if (!args[0].endsWith("d") && !args[0].endsWith("h") && !args[0].endsWith("m"))
+      return message.channel.send(`Você nâo usou o tempo de forma correta \n **d = dia** \n **h = hora** \n **m = minuto**`);
     if (isNaN(args[0][0])) return message.channel.send(`Isso não é um número!`);
     let channel = message.mentions.channels.first();
     if (!channel)
-      return message.channel.send(
-        `Você não setou um canal para que ocorra o sorteio!`
-      );
+      return message.channel.send(`Você não setou um canal para que ocorra o sorteio!`);
     let prize = args.slice(2).join(" ");
     if (!prize)
-      return message.channel.send(
-        `Falha, nenhum item para sorteio encontrado!`
-      );
+      return message.channel.send(`Falha, nenhum item para sorteio encontrado!`);
     message.channel.send(`*Sorteio criado em ${channel}*`);
     let Embed = new MessageEmbed()
       .setTitle(`Novo sorteio encontrado!`)
-      .setDescription(
-        `O membro: ${message.author} \n Está sorteando: **${prize}**`
-      )
+      .setDescription(`O membro: ${message.author} \n Está sorteando: **${prize}**`)
       .setTimestamp(Date.now() + ms(args[0])) //puxando o numero que a pessoa ssolicitou e definindo o tempo exemplo 1m = o sorteio será realizado em 1 minuto
       .setColor(`BLUE`);
     let m = await channel.send(Embed);
