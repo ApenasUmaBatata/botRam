@@ -9,17 +9,17 @@ module.exports = {
     if (
       !message.member.hasPermission(["ADMINISTRATOR"]) //bloqueando para apenas membro com permissões de admnistrador usar esse comando
     ) {
-      return message.reply(`você precisa da permissão \`Administrador\`.`);
+      return message.reply(`Esse comando é apenas para \`Administradores\`.`);
     }
 
     let argsresult; //criando a categoria do argumento
     let mChannel = message.mentions.channels.first(); //puxando um canal que o membro marcar (para assim a mensagem ser mandada no canal)
     if (mChannel) {
       argsresult = args.slice(1).join(" "); //puxando o argumento da pessoa
-      mChannel.send(argsresult); //enviando o argumento no canal marcado pela pessoa
+      mChannel.send(`O ${message.author} disse -> ${argsresult}`); //enviando o argumento no canal marcado pela pessoa
     } else {
       argsresult = args.join(" ");
-      message.channel.send(argsresult); //se a pessoa nao tiver selecionado um canal, a mensagem sera enviada no canal que o autor escreveu
+      message.channel.send(`O ${message.author} disse -> ${argsresult}`); //se a pessoa nao tiver selecionado um canal, a mensagem sera enviada no canal que o autor escreveu
     }
     message.delete();
   }
