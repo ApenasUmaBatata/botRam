@@ -63,27 +63,35 @@ module.exports = {
     }
     if (args[0].toLowerCase() == "abraçar" ){
       message.delete();
-      message.channel.send("```texto```")
+      message.channel.send("```Abraça alguém mencionado!```")
     }
-    if (args[0].toLowerCase() == "text" ){
+    if (args[0].toLowerCase() == "calculo" ){
       message.delete();
-      message.channel.send("```texto```")
+      message.channel.send("```Realiza calculos por você!```")
     }
-    if (args[0].toLowerCase() == "text" ){
+    if (args[0].toLowerCase() == "d6" ){
       message.delete();
-      message.channel.send("```texto```")
+      message.channel.send("```Rola um dado de 6 lados!(vai passar por remodelação)```")
     }
-    if (args[0].toLowerCase() == "text" ){
+    if (args[0].toLowerCase() == "d20" ){
       message.delete();
-      message.channel.send("```texto```")
+      message.channel.send("```Rola um dado de 20 lados!(vai passar por remodelação)```")
     }
-    if (args[0].toLowerCase() == "text" ){
+    if (args[0].toLowerCase() == "flip" ){
       message.delete();
-      message.channel.send("```texto```")
+      message.channel.send("```Taca uma moeda para o alto!(vai passar por remodelação)```")
     }
-    if (args[0].toLowerCase() == "text" ){
+    if (args[0].toLowerCase() == "piada" ){
       message.delete();
-      message.channel.send("```texto```")
+      message.channel.send("```Conta uma piada para você!(vai passar por remodelação)```")
+    }
+    if (args[0].toLowerCase() == "ppt" ){
+      message.delete();
+      message.channel.send("```Brinca de pedra, papeu ou tesoura com o bot!```")
+    }
+    if (args[0].toLowerCase() == "rolar" ){
+      message.delete();
+      message.channel.send("```Rola todos os dados de uma vez!(vai passar por remodelação)```")
     }
     }
 }

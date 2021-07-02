@@ -3,7 +3,7 @@ module.exports = {
     name: "flip",
     aliases: ["moeda"]
   },
-  run: async (message) => {
+  run: async (bot, message, args) => {
     //await message.react("✅");
 
     var list = ["cara", "coroa"]; //criando uma lista com as opções de queda

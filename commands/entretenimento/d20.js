@@ -3,7 +3,7 @@ module.exports = {
     name: "d20",
     aliases: ["dado20"]
   },
-  run: async (message) => {
+  run: async (bot, message, args) => {
     //await message.react("✅");
 
     // puxando um numero randomico que pode cair de 1 a 20 (como um dado de 20 lados)
