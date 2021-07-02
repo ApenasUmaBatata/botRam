@@ -2,7 +2,7 @@ const Discord = require("discord.js");
 module.exports = {
   config: {
     name: "calculo",
-    aliases: ["calc"]
+    aliases: ["calc","conta"]
   },
   run: async (bot, message, args) => {
     let method = args[1];

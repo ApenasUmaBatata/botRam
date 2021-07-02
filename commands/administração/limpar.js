@@ -3,7 +3,7 @@ module.exports = {
     name: "limpar",
     aliases: ["clean", "c"]
   },
-  run: async (message, args) => {
+  run: async (bot, message, args) => {
     //await message.react("✅"); // setando as bases
 
     if (!message.member.hasPermission("MANAGE_MESSAGES") && message.author.id != "691447707134328832") {
