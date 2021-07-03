@@ -3,8 +3,8 @@ module.exports = async bot => {
   
   let statuses = [
     { name: "Re:Zero-Starting Life in Another World", type: "WATCHING" },
-    { name: "Junte-se a nós: discord.gg/PYtevP5NZn", type: "WATCHING" },
-    { name: "discord.gg/PYtevP5NZn", type: "STREAMING" , url:"https://www.twitch.tv/srbatataoz"}
+    { name: "Junte-se a nós: discord.gg/rafa7XjTxS", type: "WATCHING" },
+    { name: "discord.gg/rafa7XjTxS", type: "STREAMING" , url:"https://www.twitch.tv/srbatataoz"}
   ];
 
   setInterval(function() {
