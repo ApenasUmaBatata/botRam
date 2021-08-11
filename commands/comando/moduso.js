@@ -47,7 +47,7 @@ module.exports = {
     }
     if (args[0].toLowerCase() == "sorteio" ){
       message.delete();
-      message.channel.send("```Ram sorteio [tempo m/h/d] [canal] [item] e/ou Ram sorteio [tempo m/h/d] [item]```")
+      message.channel.send("```Ram sorteio [tempo m/h/d] [canal] [item]```")
     }
     if (args[0].toLowerCase() == "userinfo" ){
       message.delete();
