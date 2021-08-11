@@ -5,8 +5,6 @@ config: {
   aliases: []
 },
 run: async (bot, message, args) => {
-  await message.react("✅"); // setando as bases
-
   if (!message.member.hasPermission("ADMINISTRATOR"))
     return message.reply("Você precisa da permissão \`Administrador`"); // caso o membro não possua a permissão 'EXPULSAR_MEMBROS', vamos botar o erro
 

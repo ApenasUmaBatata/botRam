@@ -11,13 +11,13 @@ module.exports = {
       let eb = new Discord.MessageEmbed() //criando uma pequena embed
         .setThumbnail(bicon)
         .setDescription(
-          `\`Passando pra avisar que voce usou o comando de modo incorreto! Uma sugestão de como usar:\` \n \`=========================== \` \n \`Ram sfilme bob-esponja moranguinho vovo-zona o-bom-dinossauro\` \n \`=========================== \` \n \`OBS-1: filmes que contenham nome composto, usar ao invés de "espaço" colocar -\` \n \`OBS-2: na troca de um filme para o outro usar "espaço"\` \n \`OBS-3: Limite máximo de 4 filmes!\``
+          `\`Passando pra avisar que voce usou o comando de modo incorreto! Uma sugestão de como usar:\` \n \`=========================== \` \n \`Ram sfilme bob_esponja moranguinho vovo_zona o_bom_dinossauro\` \n \`=========================== \` \n \`OBS-1: filmes que contenham nome composto, usar ao invés de "espaço" colocar _\` \n \`OBS-2: na troca de um filme para o outro usar "espaço"\` \n \`OBS-3: Limite máximo de 4 filmes!\``
         );//caso a pessoa nao coloque nada na mensagem (exemplo: Ram sfilme ) o bot ira retornar essa mensagem
       return message.channel.send(eb); //retornado a embed em caso de mensagem vazia
 
     }
     //pegando os arugmentos para sugestão do filme
-    //OBS: quando o filme possui duplo argumento (os simpsons) usar - no lugar do "espaço"
+    //OBS: quando o filme possui duplo argumento (os simpsons) usar _ no lugar do "espaço"
     var a1 = args[0];
     var a2 = args[1];
     var a3 = args[2];

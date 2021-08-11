@@ -31,8 +31,8 @@ module.exports = {
     }
     uptime += `\`${horas}h ${minutos}m ${segundos}s\``; // a finalização daquele espaco do comeco
 
-    const moment = require("moment");
-    moment.locale("pt-BR");
+    //const moment = require("moment");
+    //moment.locale("pt-BR");
     let inline = true;
     let bicon = bot.user.displayAvatarURL();
     let botembed = new Discord.MessageEmbed()
@@ -40,7 +40,7 @@ module.exports = {
       .setThumbnail(bicon)
       .setDescription("`Algumas informações sobre mim!`")
       .addField("__Meu nome__", `**${bot.user.username}**`, inline)
-      .addField("__Meu criador__", "SrBatata#5199", inline)
+      .addField("__Meu criador__", "SrBatata#1001", inline)
     //.addField("__Meu ping__", `*${parseInt(bot.ws.ping)}*`, inline)
     //.addField("__**Nasci dia**__",`${moment(bot.user.createdAt).format("L")}!`)
       .addField("__**Atualmente tenho**__", `${bot.commands.size} comandos`)

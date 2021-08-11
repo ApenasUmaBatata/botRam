@@ -6,22 +6,35 @@ module.exports = {
     aliases: ["Enquete"]
   },
   run: async (bot, message, args) => {
-    //await message.react("✅");
+    if (!message.member.hasPermission(["ADMINISTRATOR"])) {
+      return message.reply(`Esse comando é apenas para \`Administradores\`.`);
+    }
 
-    // var canal = client.channels.get('692026509841662073')
-
-    var sugestao = args.slice(0).join(" "); //puxando os argumentos para sugestão
-    if (!args.join(" ")) return message.reply("Escreva algo!"); //se a pessoa nao escrever nada o bot irá mandar essa mensagem
-
-    let embed = new Discord.MessageEmbed() //criando uma embed
-      .setTitle(`ENQUETE`)
-      .setColor("RANDOM")
-      .setDescription(`${sugestao}`)
-      .setFooter(`Clique em um emoji para deixar sua opinião!`)
-    message.channel.send(embed).then(function(msg) {
-      msg.react("<:CyclopsYesPillow:805298824725528586>");
-      msg.react("<:CyclopsNoPillow:805298794714365952>"); //enviando a mensagem e reagindo na mensagem com emojis do servidor
-    });
-    message.delete(); //apagando a mensagem do autor
+    let argsresult; //criando a categoria do argumento
+    let mChannel = message.mentions.channels.first(); //puxando um canal que o membro marcar (para assim a mensagem ser mandada no canal)
+    if (mChannel) {
+      argsresult = args.slice(1).join(" "); //puxando o argumento da pessoa
+      let embed = new Discord.MessageEmbed()
+        .setTitle(`ENQUETE`)
+        .setColor("RANDOM")
+        .setDescription(argsresult)
+        .setFooter(`Clique em um emoji para deixar sua opinião!`);
+      mChannel.send(embed).then(function(msg) {
+        msg.react("<:CyclopsYesPillow:805298824725528586>");
+        msg.react("<:CyclopsNoPillow:805298794714365952>");
+      }); //enviando o argumento no canal marcado pela pessoa
+    } else {
+      argsresult = args.join(" ");
+      let embed = new Discord.MessageEmbed()
+        .setTitle(`ENQUETE`)
+        .setColor("RANDOM")
+        .setDescription(argsresult)
+        .setFooter(`Clique em um emoji para deixar sua opinião!`);
+      message.channel.send(embed).then(function(msg) {
+        msg.react("<:CyclopsYesPillow:805298824725528586>");
+        msg.react("<:CyclopsNoPillow:805298794714365952>");
+      }); //se a pessoa nao tiver selecionado um canal, a mensagem sera enviada no canal que o autor escreveu
+    }
+    message.delete();
   }
 };
