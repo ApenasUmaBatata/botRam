@@ -13,7 +13,7 @@ module.exports = {
     if (!message.member.hasPermission("ADMINISTRATOR")) {
       return message.reply(`você precisa da permissão \`Administrador\`.`);
     }
-    if (!args[0]) return message.channel.send(`Modo correto de uso! \n Ram sorteio {tempo} {#canal} {item do sorteio} \n Exemplo: Ram sorteio 1m #conversa chocolate`);
+    if (!args[0]) return message.channel.send(`Modo correto de uso! \n Ram sorteio [tempo] [#canal] [item]`);
     //puxando argumentos para definir o tempo
     if (!args[0].endsWith("d") && !args[0].endsWith("h") && !args[0].endsWith("m"))
       return message.channel.send(`Você nâo usou o tempo de forma correta \n **d = dia** \n **h = hora** \n **m = minuto**`);
@@ -35,9 +35,7 @@ module.exports = {
     setTimeout(() => {
       if (m.reactions.cache.get("🎉").count <= 1) {
         message.channel.send(`Reactions: ${m.reactions.cache.get("🎉").count}`); //puxando as reações da imagem
-        return message.channel.send(
-          `Não houve pessoas suficientes para realizar o sorteio!` //caso nao tenha nenhuma reação de pessoa, o bot retornara essa mensagem
-        );
+        return message.channel.send(`Não houve pessoas suficientes para realizar o sorteio!`); //caso nao tenha nenhuma reação de pessoa, o bot retornara essa mensagem
       }
 
       let winner = m.reactions.cache
