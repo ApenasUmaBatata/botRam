@@ -27,7 +27,7 @@ module.exports = {
     message.channel.send(`*Sorteio criado em ${channel}*`);
     let Embed = new MessageEmbed()
       .setTitle(`Novo sorteio encontrado!`)
-      .setDescription(`O membro: ${message.author} \n Está sorteando: **${prize}**`)
+      .setDescription(`O membro: ${message.author} \n Está fazendo um sorteio: **${prize}**`)
       .setTimestamp(Date.now() + ms(args[0])) //puxando o numero que a pessoa ssolicitou e definindo o tempo exemplo 1m = o sorteio será realizado em 1 minuto
       .setColor(`BLUE`);
     let m = await channel.send(Embed);

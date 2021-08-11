@@ -1,10 +1,11 @@
 const Discord = require("discord.js");
+
 module.exports = {
   config: {
     name: "botinfo",
     aliases: ["info", "on", "convite", "invite", "bot", "ping"]
   },
-  run: async (bot, message) => {
+  run: async (bot, message, args) => {
     //await message.react("✅");
 
     let dias = 0; // variavel para definir dias
@@ -29,25 +30,19 @@ module.exports = {
     if (minutos > 60) {
       minutos = 0; // e zera os segundos
     }
-    uptime += `\`${horas}h ${minutos}m ${segundos}s\``; // a finalização daquele espaco do comeco
+    uptime += `${horas}h ${minutos}m ${segundos}s`; // a finalização daquele espaco do comeco
 
-    //const moment = require("moment");
-    //moment.locale("pt-BR");
     let inline = true;
     let bicon = bot.user.displayAvatarURL();
     let botembed = new Discord.MessageEmbed()
       .setColor("RANDOM")
       .setThumbnail(bicon)
+      .setImage('https://i.imgur.com/t8s41Lu.png')
       .setDescription("`Algumas informações sobre mim!`")
-      .addField("__Meu nome__", `**${bot.user.username}**`, inline)
-      .addField("__Meu criador__", "SrBatata#1001", inline)
-    //.addField("__Meu ping__", `*${parseInt(bot.ws.ping)}*`, inline)
-    //.addField("__**Nasci dia**__",`${moment(bot.user.createdAt).format("L")}!`)
-      .addField("__**Atualmente tenho**__", `${bot.commands.size} comandos`)
-      .addField("__**Estou acordada à**__", `${uptime}`)
-      .addField(`__**Me convide**__`, `[Clique aqui](https://discord.com/api/oauth2/authorize?client_id=705547264537657465&permissions=8&scope=bot)`)
+      .addField(`Informações gerais`, `\`Me chamo ${bot.user.username}, fui criada pelo SrBatata#1001\``)
+      .addField(`Informações adicionais`, `\`Atualmente tenho ${bot.commands.size} comandos, estou acordada á ${uptime}, me encontro em ${bot.guilds.cache.size} servidores\``)
+      .addField(`Me convide`, `[Clicando aqui!](https://discord.com/api/oauth2/authorize?client_id=705547264537657465&permissions=8&scope=bot)`)
     //.addField(`__**Vote em mim**__`, `[Top.gg](https://top.gg/bot/705547264537657465)`);
-
     message.channel.send(botembed);
   }
 };
