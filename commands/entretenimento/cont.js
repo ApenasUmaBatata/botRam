@@ -24,7 +24,7 @@ module.exports = {
         .setColor("PURPLE")
         .setDescription(`${operations}`);
       message.delete();
-      return message.channel.send(embed).then(msg => {
+      return message.channel.send({ embeds: [embed] }).then(msg => {
         setTimeout(function() {
           msg.delete();
         }, 10000);

@@ -10,7 +10,7 @@ module.exports = {
     //await message.react("✅");
 
     //bloqueando comando para administrador (e o ID é para alguma outra pessoa, entao pode remover do && pra frente)
-    if (!message.member.hasPermission("ADMINISTRATOR")) {
+    if (!message.member. permissions.has("ADMINISTRATOR")) {
       return message.reply(`você precisa da permissão \`Administrador\`.`);
     }
     if (!args[0]) return message.channel.send(`Modo correto de uso! \n Ram sorteio [tempo] [#canal] [item]`);
@@ -30,7 +30,7 @@ module.exports = {
       .setDescription(`O membro: ${message.author} \n Está fazendo um sorteio: **${prize}**`)
       .setTimestamp(Date.now() + ms(args[0])) //puxando o numero que a pessoa ssolicitou e definindo o tempo exemplo 1m = o sorteio será realizado em 1 minuto
       .setColor(`BLUE`);
-    let m = await channel.send(Embed);
+    let m = await channel.send({ embeds: [Embed] });
     m.react("🎉");
     setTimeout(() => {
       if (m.reactions.cache.get("🎉").count <= 1) {

@@ -23,6 +23,6 @@ module.exports = {
     const embed = new Discord.MessageEmbed() //criando uma embed
     .setTitle(`OwO, ${message.author.username} Abraçou ${message.mentions.users.first().username}`)
     .setImage(`${img}`)
-    message.channel.send(embed); //enviando a embed
+    message.channel.send({ embeds: [embed] }); //enviando a embed
   }
 };

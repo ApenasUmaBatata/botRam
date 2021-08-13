@@ -12,88 +12,88 @@ module.exports = {
       let bicon = bot.user.displayAvatarURL();
       embed = new Discord.MessageEmbed()
           .setAuthor('Sua ajuda chegou', bicon)
-          .addField(`Administração`, `\`Limpar\`,\`Kick\``)
-          .addField(`Comandos gerais`, `\`Ajuda\`,\`Modouso\`,\`Botinfo\`,\`Enquete\`,\`Filme\`,\`Say\`,\`Sorteio\`,\`Svinfo\`,\`Userinfo\``)
-          .addField(`Entretenimento`, `\`Abraçar\`,\`Calculo\`,\`d6\`,\`d20\`,\`Flip\`,\`rps\``)
+          .addField(`Administração`, `\`limpar\`,\`kick\``)
+          .addField(`Comandos gerais`, `\`ajuda\`,\`modouso\`,\`botinfo\`,\`enquete\`,\`filme\`,\`say\`,\`sorteio\`,\`svinfo\`,\`userinfo\``)
+          .addField(`Entretenimento`, `\`abraçar\`,\`calculo\`,\`d6\`,\`d20\`,\`flip\`,\`rps\``)
           .setImage('https://data.whicdn.com/images/287575135/original.gif')
           .setFooter(`Digite ' ${pref}ajuda <CommandName>' para detalhes do comando!`, message.author.displayAvatarURL())
           .setColor("#ff00c3");
       message.delete();
-      message.channel.send(embed)
+      message.channel.send({ embeds: [embed] })
     }
-    if (args[0].toLowerCase() == "kick" ){
+    if (args[0] == "kick" ){
       message.delete();
-      message.channel.send("```O bot irá expular a pessoa mencionada!```")
+      message.channel.send("```O bot irá expulsar a pessoa mencionada!```")
     }
-    if (args[0].toLowerCase() == "limpar" ){
+    if (args[0] == "limpar" ){
       message.delete();
-      message.channel.send("```O bot apaga a quantida de mensagens solicitada!```")
+      message.channel.send("```O bot apaga a quantidade de mensagens solicitada!```")
     }
-    if (args[0].toLowerCase() == "ajuda" ){
+    if (args[0] == "ajuda" ){
       message.delete();
       message.channel.send("```O comando 'ajuda' lhe mostra todos os comandos disponíveis!```")
     }
-    if (args[0].toLowerCase() == "modouso" ){
+    if (args[0] == "modouso" ){
       message.delete();
       message.channel.send("```O comando mostra a forma correta de usar os demais comandos!```")
     }
-    if (args[0].toLowerCase() == "botinfo" ){
+    if (args[0] == "botinfo" ){
       message.delete();
       message.channel.send("```Mostra algumas informações do bot!```")
     }
-    if (args[0].toLowerCase() == "enquete" ){
+    if (args[0] == "enquete" ){
       message.delete();
       message.channel.send("```Cria uma enquete com até 4 opções!```")
     }
-    if (args[0].toLowerCase() == "filme" ){
+    if (args[0] == "filme" ){
       message.delete();
       message.channel.send("```Abre uma votação para filme, com até 4 opções!```")
     }
-    if (args[0].toLowerCase() == "say" ){
+    if (args[0] == "say" ){
       message.delete();
       message.channel.send("```Escreva uma mensagem, e o bot irá mandar ela no chat por você!```")
     }
-    if (args[0].toLowerCase() == "sorteio" ){
+    if (args[0] == "sorteio" ){
       message.delete();
       message.channel.send("```Abre um sorteio!```")
     }
-    if (args[0].toLowerCase() == "svinfo" ){
+    if (args[0] == "svinfo" ){
       message.delete();
       message.channel.send("```Mostra algumas informações do servidor!```")
     }
-    if (args[0].toLowerCase() == "userinfo" ){
+    if (args[0] == "userinfo" ){
       message.delete();
       message.channel.send("```Mostra algumas informações suas ou de alguém mencionado!```")
     }
-    if (args[0].toLowerCase() == "abraçar" ){
+    if (args[0] == "abraçar" ){
       message.delete();
       message.channel.send("```Abraça alguém mencionado!```")
     }
-    if (args[0].toLowerCase() == "calculo" ){
+    if (args[0] == "calculo" ){
       message.delete();
       message.channel.send("```Realiza calculos por você!```")
     }
-    if (args[0].toLowerCase() == "d6" ){
+    if (args[0] == "d6" ){
       message.delete();
       message.channel.send("```Rola um dado de 6 lados!(vai passar por remodelação)```")
     }
-    if (args[0].toLowerCase() == "d20" ){
+    if (args[0] == "d20" ){
       message.delete();
       message.channel.send("```Rola um dado de 20 lados!(vai passar por remodelação)```")
     }
-    if (args[0].toLowerCase() == "flip" ){
+    if (args[0] == "flip" ){
       message.delete();
       message.channel.send("```Taca uma moeda para o alto!(vai passar por remodelação)```")
     }
-    if (args[0].toLowerCase() == "piada" ){
+    if (args[0] == "piada" ){
       message.delete();
       message.channel.send("```Conta uma piada para você!(vai passar por remodelação)```")
     }
-    if (args[0].toLowerCase() == "ppt" ){
+    if (args[0] == "ppt" ){
       message.delete();
       message.channel.send("```Brinca de pedra, papel ou tesoura com o bot!```")
     }
-    if (args[0].toLowerCase() == "rolar" ){
+    if (args[0] == "rolar" ){
       message.delete();
       message.channel.send("```Rola todos os dados de uma vez!(vai passar por remodelação)```")
     }

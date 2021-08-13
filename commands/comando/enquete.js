@@ -6,7 +6,7 @@ module.exports = {
     aliases: ["Enquete"]
   },
   run: async (bot, message, args) => {
-    if (!message.member.hasPermission(["ADMINISTRATOR"])) {
+    if (!message.member.permissions.has(["ADMINISTRATOR"])) {
       return message.reply(`Esse comando é apenas para \`Administradores\`.`);
     }
 
@@ -18,8 +18,9 @@ module.exports = {
         .setTitle(`ENQUETE`)
         .setColor("RANDOM")
         .setDescription(argsresult)
-        .setFooter(`Clique em um emoji para deixar sua opinião!`);
-      mChannel.send(embed).then(function(msg) {
+        .setFooter(`Clique em um emoji para deixar sua opinião!`)
+        .setAuthor(`Comando executado por: ${message.author.username}`, message.author.displayAvatarURL())
+      mChannel.send({ embeds: [embed] }).then(function(msg) {
         msg.react("<:CyclopsYesPillow:805298824725528586>");
         msg.react("<:CyclopsNoPillow:805298794714365952>");
       }); //enviando o argumento no canal marcado pela pessoa
@@ -29,8 +30,9 @@ module.exports = {
         .setTitle(`ENQUETE`)
         .setColor("RANDOM")
         .setDescription(argsresult)
-        .setFooter(`Clique em um emoji para deixar sua opinião!`);
-      message.channel.send(embed).then(function(msg) {
+        .setFooter(`Clique em um emoji para deixar sua opinião!`)
+        .setAuthor(`Comando executado por: ${message.author.username}`, message.author.displayAvatarURL())
+      message.channel.send({ embeds: [embed] }).then(function(msg) {
         msg.react("<:CyclopsYesPillow:805298824725528586>");
         msg.react("<:CyclopsNoPillow:805298794714365952>");
       }); //se a pessoa nao tiver selecionado um canal, a mensagem sera enviada no canal que o autor escreveu

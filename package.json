@@ -7,14 +7,14 @@
     "start": "node index.js"
   },
   "engines": {
-    "node": "12.x"
+    "node": "16.x"
   },
   "dependencies": {
-    "discord.js": "^12.5.3",
+    "discord.js": "^13.1.0",
+    "dotenv": "^10.0.0",
     "moment": "^2.25.3",
     "ms": "^2.1.3",
     "parse-ms": "^2.1.0",
-    "quick.db": "^7.1.1",
-    "snekfetch": "^4.0.4"
+    "quick.db": "^7.1.1"
   }
 }

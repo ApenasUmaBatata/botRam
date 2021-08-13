@@ -32,24 +32,17 @@ module.exports = {
       .setThumbnail(picon.user.displayAvatarURL())
       .setColor("RANDOM")
       .addField("Nome de usuário", `${member.user.tag}`, inline)
-      .addField(
-        "Nickname",
-        `${member.nickname !== null ? `${member.nickname}` : "Nenhum"}`,
-        true
-      )
+      .addField("Nickname",`${member.nickname !== null ? `${member.nickname}` : "Nenhum"}`,true)
       .addField("Bot", `${bot}`, inline, true)
       //.addField("Status", `${status[member.user.presence.status]}`, inline, true)
       //.addField("Jogando", `${member.user.presence.game ? `🎮 ${member.user.presence.game.name}`: "Não está jogando"}`, inline, true)
-      .addField(
-        "Cargos",
-        `${member.roles.cache
+      .addField("Cargos",`${member.roles.cache
           .filter(r => r.id !== message.guild.id)
           .map(roles => `\`${roles.name}\``)
-          .join(" **|** ") || "Não possui cargos"}`
-      )
+          .join(" **|** ") || "Não possui cargos"}`)
       .setFooter(`Informações sobre: ${member.user.username}`)
       .setTimestamp();
 
-    message.channel.send(embed);
+    message.channel.send({ embeds: [embed] });
   }
 };

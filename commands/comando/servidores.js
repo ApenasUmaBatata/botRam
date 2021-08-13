@@ -15,6 +15,6 @@ module.exports = {
       .setColor("GOLD")
       .setDescription(`${servers}`);
 
-    message.channel.send(embed);
+    message.channel.send({ embeds: [embed] });
   }
 };

@@ -32,7 +32,7 @@ module.exports = async (bot, message) => {
       .setTitle("Você está perdido? Estou aqui para te ajudar!")
       .setColor("#9F7DD3")
       .setDescription(`Olá jovem guerreiro, estava em minha caminhada matinal e escutei por seus gritos, se estiver perdido use \`${prefix}ajuda\`. Lembrando, uma viagem pode ser muito perigosa se você estiver sozinho!`);
-    message.channel.send(embed);//enviando embed de resposta sobre a marcação dela
+    message.channel.send({ embeds: [embed] });//enviando embed de resposta sobre a marcação dela
   }
 
   //se o comando nao existir na lista do bot, ele ira enviar uma mensagem aleatoria falando que nao existe o comando

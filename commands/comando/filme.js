@@ -13,7 +13,7 @@ module.exports = {
         .setDescription(
           `\`Passando pra avisar que voce usou o comando de modo incorreto! Uma sugestão de como usar:\` \n \`=========================== \` \n \`Ram sfilme bob_esponja moranguinho vovo_zona o_bom_dinossauro\` \n \`=========================== \` \n \`OBS-1: filmes que contenham nome composto, usar ao invés de "espaço" colocar _\` \n \`OBS-2: na troca de um filme para o outro usar "espaço"\` \n \`OBS-3: Limite máximo de 4 filmes!\``
         );//caso a pessoa nao coloque nada na mensagem (exemplo: Ram sfilme ) o bot ira retornar essa mensagem
-      return message.channel.send(eb); //retornado a embed em caso de mensagem vazia
+      return message.channel.send({ embeds: [eb] }); //retornado a embed em caso de mensagem vazia
 
     }
     //pegando os arugmentos para sugestão do filme
@@ -38,11 +38,9 @@ module.exports = {
       .setTitle(`Filmes/Jogos sugeridos:`)
       .setColor("RED")
       .setThumbnail(bicon)
-      .setDescription(
-        ` <:um1:809185254887784499>- ${a1} \n <:dois2:809185285086642208>- ${a2} \n <:tres3:809185310851989564>- ${a3} \n <:quatro4:809185331890618379>- ${a4} \n ||@everyone||`
-      )
+      .setDescription(` <:um1:809185254887784499>- ${a1} \n <:dois2:809185285086642208>- ${a2} \n <:tres3:809185310851989564>- ${a3} \n <:quatro4:809185331890618379>- ${a4}`)
       .setFooter(`Clique em um emoji para deixar seu voto!`);
-    message.channel.send(embed).then(function(msg) {
+    message.channel.send({ embeds: [embed] }).then(function(msg) {
       msg.react("<:um1:809185254887784499>"); //enviando a embed e reagindo na mensagem com os emojis para votação
       msg.react("<:dois2:809185285086642208>");
       msg.react("<:tres3:809185310851989564>");

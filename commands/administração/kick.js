@@ -5,7 +5,7 @@ config: {
   aliases: []
 },
 run: async (bot, message, args) => {
-  if (!message.member.hasPermission("ADMINISTRATOR"))
+  if (!message.member.permissions.has('ADMINISTRATOR'))
     return message.reply("Você precisa da permissão \`Administrador`"); // caso o membro não possua a permissão 'EXPULSAR_MEMBROS', vamos botar o erro
 
   let member = message.mentions.members.first(); // puxando um membro mencionavel
@@ -29,6 +29,6 @@ run: async (bot, message, args) => {
     .addField("Motivo:", reason)
     .setColor("DARK_RED");
 
-  message.channel.send(pEmbed);
+  message.channel.send({ embeds: [pEmbed] });
 }
 }

@@ -51,7 +51,7 @@ module.exports = {
       if (args[0].toLowerCase() == "verde") {
         let role = message.guild.roles.cache.find(r => r.name === "verde");
         if (role === undefined) {
-          if (!message.member.hasPermission("MANAGE_ROLES")) {
+          if (!message.member. permissions.has("MANAGE_ROLES")) {
             message.delete();
             return message.reply(`Você precisa da permissão \`Gerenciar Cargos\`.`).then(msg => {
                 setTimeout(function() {
@@ -97,7 +97,7 @@ module.exports = {
       if (args[0].toLowerCase() == "azul") {
         let role = message.guild.roles.cache.find(r => r.name === "azul");
         if (role === undefined) {
-          if (!message.member.hasPermission("MANAGE_ROLES")) {
+          if (!message.member. permissions.has("MANAGE_ROLES")) {
             message.delete();
             return message.reply(`Você precisa da permissão \`Gerenciar Cargos\`.`).then(msg => {
                 setTimeout(function() {
@@ -143,7 +143,7 @@ module.exports = {
       if (args[0].toLowerCase() == "vermelho") {
         let role = message.guild.roles.cache.find(r => r.name === "vermelho");
         if (role === undefined) {
-          if (!message.member.hasPermission("MANAGE_ROLES")) {
+          if (!message.member. permissions.has("MANAGE_ROLES")) {
             message.delete();
             return message.reply(`Você precisa da permissão \`Gerenciar Cargos\`.`).then(msg => {
                 setTimeout(function() {
@@ -189,7 +189,7 @@ module.exports = {
       if (args[0].toLowerCase() == "rosa") {
         let role = message.guild.roles.cache.find(r => r.name === "rosa");
         if (role === undefined) {
-          if (!message.member.hasPermission("MANAGE_ROLES")) {
+          if (!message.member. permissions.has("MANAGE_ROLES")) {
             message.delete();
             return message.reply(`Você precisa da permissão \`Gerenciar Cargos\`.`).then(msg => {
                 setTimeout(function() {
@@ -235,7 +235,7 @@ module.exports = {
       if (args[0].toLowerCase() == "amarelo") {
         let role = message.guild.roles.cache.find(r => r.name === "amarelo");
         if (role === undefined) {
-          if (!message.member.hasPermission("MANAGE_ROLES")) {
+          if (!message.member. permissions.has("MANAGE_ROLES")) {
             message.delete();
             return message.reply(`Você precisa da permissão \`Gerenciar Cargos\`.`).then(msg => {
                 setTimeout(function() {
@@ -281,7 +281,7 @@ module.exports = {
       if (args[0].toLowerCase() == "roxo") {
         let role = message.guild.roles.cache.find(r => r.name === "roxo");
         if (role === undefined) {
-          if (!message.member.hasPermission("MANAGE_ROLES")) {
+          if (!message.member. permissions.has("MANAGE_ROLES")) {
             message.delete();
             return message.reply(`Você precisa da permissão \`Gerenciar Cargos\`.`).then(msg => {
                 setTimeout(function() {
@@ -327,7 +327,7 @@ module.exports = {
       if (args[0].toLowerCase() == "preto") {
         let role = message.guild.roles.cache.find(r => r.name === "preto");
         if (role === undefined) {
-          if (!message.member.hasPermission("MANAGE_ROLES")) {
+          if (!message.member. permissions.has("MANAGE_ROLES")) {
             message.delete();
             return message.reply(`Você precisa da permissão \`Gerenciar Cargos\`.`).then(msg => {
                 setTimeout(function() {
@@ -373,7 +373,7 @@ module.exports = {
       if (args[0].toLowerCase() == "branco") {
         let role = message.guild.roles.cache.find(r => r.name === "branco");
         if (role === undefined) {
-          if (!message.member.hasPermission("MANAGE_ROLES")) {
+          if (!message.member. permissions.has("MANAGE_ROLES")) {
             message.delete();
             return message.reply(`Você precisa da permissão \`Gerenciar Cargos\`.`).then(msg => {
                 setTimeout(function() {
