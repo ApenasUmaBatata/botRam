@@ -9,7 +9,7 @@ module.exports = {
   run: async (bot, message, args, tools) => {
     //await message.react("✅");
 
-    if (!message.member.hasPermission("ADMINISTRATOR"))
+    if (!message.member. permissions.has("ADMINISTRATOR"))
       return message.reply(`você precisa da permissão \`ADMINISTRADOR\`.`);
 
     let membro = message.mentions.users.first() || message.author; // caso ele não mencione ninguém, vai ser pra si mesmo

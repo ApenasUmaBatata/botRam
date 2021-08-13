@@ -32,7 +32,7 @@ module.exports = {
     .setDescription(`${message.author} you robbed ${user} and got away with ${random}!`)
     .setColor("GREEN")
     .setTimestamp()
-    message.channel.send(embed)
+    message.channel.send({ embeds: [embed] });
 
 
     db.subtract(`money_${user.id}`, random)
