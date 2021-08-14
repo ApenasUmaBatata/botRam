@@ -12,9 +12,6 @@
   "dependencies": {
     "discord.js": "^13.1.0",
     "dotenv": "^10.0.0",
-    "moment": "^2.25.3",
-    "ms": "^2.1.3",
-    "parse-ms": "^2.1.0",
-    "quick.db": "^7.1.1"
+    "ms": "^2.1.3"
   }
 }
