@@ -14,7 +14,7 @@ module.exports = {
           .setAuthor('Sua ajuda chegou', bicon)
           .addField(`Administração`, `\`limpar\`,\`kick\``)
           .addField(`Comandos gerais`, `\`ajuda\`,\`enquete\`,\`filme\`,\`say\`,\`sorteio\`,\`userinfo\``)
-          .addField(`Entretenimento`, `\`abraçar\`,\`calculo\`,\`d6\`,\`d20\`,\`rps\``)
+          .addField(`Entretenimento`, `\`ação\`,\`calculo\`,\`d6\`,\`d20\`,\`rps\``)
           .setImage('https://data.whicdn.com/images/287575135/original.gif')
           .setFooter(`Digite ' ${pref}modouso <CommandName>' para detalhes do comando!`, message.author.displayAvatarURL())
           .setColor("#ff00c3");
@@ -27,7 +27,7 @@ module.exports = {
     }
     if (args[0]  == "limpar" ){
       message.delete();
-      message.channel.send("```Ram limpar [quantidade, max 100 mensagens]```")
+      message.channel.send("```Ram limpar [quantidade, {max 100 mensagens}]```")
     }
     if (args[0]  == "ajuda" ){
       message.delete();
@@ -53,9 +53,9 @@ module.exports = {
       message.delete();
       message.channel.send("```Ram userinfo [@pessoa] e/ou Ram userinfo (para mostrar apenas informações suas)```")
     }
-    if (args[0]  == "abraçar" ){
+    if (args[0]  == "ação" ){
       message.delete();
-      message.channel.send("```Ram abraçar [@pessoa]```")
+      message.channel.send("```Ram ação [nome da ação] [@pessoa]```")
     }
     if (args[0]  == "calculo" ){
       message.delete();

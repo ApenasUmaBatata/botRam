@@ -27,5 +27,5 @@ module.exports = async bot => {
   setInterval(function() {
     let img = imgs[Math.floor(Math.random() * imgs.length)];
     bot.user.setAvatar(img);
-  }, 600000);
+  }, 1200000);
 };

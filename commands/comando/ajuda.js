@@ -14,7 +14,7 @@ module.exports = {
           .setAuthor('Sua ajuda chegou', bicon)
           .addField(`Administração`, `\`limpar\`,\`kick\``)
           .addField(`Comandos gerais`, `\`ajuda\`,\`modouso\`,\`botinfo\`,\`enquete\`,\`filme\`,\`say\`,\`sorteio\`,\`svinfo\`,\`userinfo\``)
-          .addField(`Entretenimento`, `\`abraçar\`,\`calculo\`,\`d6\`,\`d20\`,\`flip\`,\`rps\``)
+          .addField(`Entretenimento`, `\`ação\`,\`calculo\`,\`d6\`,\`d20\`,\`flip\`,\`rps\``)
           .setImage('https://data.whicdn.com/images/287575135/original.gif')
           .setFooter(`Digite ' ${pref}ajuda <CommandName>' para detalhes do comando!`, message.author.displayAvatarURL())
           .setColor("#ff00c3");
@@ -65,9 +65,9 @@ module.exports = {
       message.delete();
       message.channel.send("```Mostra algumas informações suas ou de alguém mencionado!```")
     }
-    if (args[0] == "abraçar" ){
+    if (args[0] == "ação" ){
       message.delete();
-      message.channel.send("```Abraça alguém mencionado!```")
+      message.channel.send("```Realiza uma ação em alguém mencionado!```")
     }
     if (args[0] == "calculo" ){
       message.delete();

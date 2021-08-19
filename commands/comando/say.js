@@ -14,10 +14,10 @@ module.exports = {
     let mChannel = message.mentions.channels.first(); //puxando um canal que o membro marcar (para assim a mensagem ser mandada no canal)
     if (mChannel) {
       argsresult = args.slice(1).join(" "); //puxando o argumento da pessoa
-      mChannel.send(`${message.author} disse -> \`${argsresult}\``); //enviando o argumento no canal marcado pela pessoa
+      mChannel.send(`${message.author} disse -> ${argsresult}`); //enviando o argumento no canal marcado pela pessoa
     } else {
       argsresult = args.join(" ");
-      message.channel.send(`${message.author} disse -> \`${argsresult}\``); //se a pessoa nao tiver selecionado um canal, a mensagem sera enviada no canal que o autor escreveu
+      message.channel.send(`${message.author} disse -> ${argsresult}`); //se a pessoa nao tiver selecionado um canal, a mensagem sera enviada no canal que o autor escreveu
     }
     message.delete();
   }
