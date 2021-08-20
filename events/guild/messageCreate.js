@@ -37,8 +37,8 @@ module.exports = async (bot, message) => {
 
   //se o comando nao existir na lista do bot, ele ira enviar uma mensagem aleatoria falando que nao existe o comando
   const frases = [
-    `Não reconheci esse comando, de uma olhada em \`${prefix} ajuda\`!`,
-    `Esse comando pode não existir, de um olhada em \`${prefix} ajuda\`!`,
+    `Não reconheci esse comando, de uma olhada em \`${prefix}ajuda\`!`,
+    `Esse comando pode não existir, de um olhada em \`${prefix}ajuda\`!`,
   ]
   let fras = frases[Math.floor(Math.random() * frases.length)]
 
