@@ -10,6 +10,7 @@
     "node": "16.x"
   },
   "dependencies": {
+    "dicionario.js": "^1.0.8",
     "discord.js": "^13.1.0",
     "dotenv": "^10.0.0",
     "moment": "^2.29.1",
