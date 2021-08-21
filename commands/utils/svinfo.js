@@ -1,4 +1,5 @@
 const Discord = require("discord.js");
+const moment = require('moment')
 module.exports = {
   config: {
     name: "svinfo",
@@ -13,12 +14,13 @@ module.exports = {
       .setColor("RANDOM")
       .setThumbnail(sicon)
       .addField("Nome da guilda", `${message.guild.name}`, inline)
-      .addField("Dono", `${message.guild.owner}`, inline)
-      .addField("Região", `${message.guild.region}`, inline)
+      .addField("Dono", `${(await bot.users.fetch(message.guild.ownerId)).username}`, inline)
+      .addField("Existe desde", `${moment(message.guild.createdAt).format('L')}`, inline)
+      .addField("Bosters", `<a:nitroboost:878466316313456650> ${message.guild.premiumSubscriptionCount}`,inline)
       .addField("Membros", `👥 ${message.guild.memberCount}`, inline)
       .addField("Cargos", `${message.guild.roles.cache.size}`, inline)
-      .addField("Canais", `${message.guild.channels.cache.size}`, inline);
+      .addField("Canais", `<:chat:878466292020043776> ${message.guild.channels.cache.size}`, inline);
 
-    message.channel.send({ embeds: [serverembed] });
+    message.reply({ embeds: [serverembed] });
   }
 };

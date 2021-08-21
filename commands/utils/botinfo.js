@@ -32,17 +32,16 @@ module.exports = {
     }
     uptime += `${horas}h ${minutos}m ${segundos}s`; // a finalização daquele espaco do comeco
 
-    let inline = true;
     let bicon = bot.user.displayAvatarURL();
     let botembed = new Discord.MessageEmbed()
       .setColor("RANDOM")
       .setThumbnail(bicon)
       .setImage('https://i.imgur.com/t8s41Lu.png')
       .setDescription("`Algumas informações sobre mim!`")
-      .addField(`Informações gerais`, `\`Me chamo ${bot.user.username}, fui codificada por SrBatata#1001\``)
+      .addField(`Informações gerais`, `\`Me chamo ${bot.user.username}, fui codificada pelo grupo ${(await bot.application.fetch()).owner}\``)
       .addField(`Informações adicionais`, `\`Atualmente tenho ${bot.commands.size} comandos, estou acordada á ${uptime}, me encontro em ${bot.guilds.cache.size} servidores\``)
       .addField(`Me convide`, `[Clicando aqui!](https://discord.com/api/oauth2/authorize?client_id=705547264537657465&permissions=8&scope=bot)`)
     //.addField(`__**Vote em mim**__`, `[Top.gg](https://top.gg/bot/705547264537657465)`);
-    message.channel.send({ embeds: [botembed] });
+    message.reply({ embeds: [botembed] });
   }
 };

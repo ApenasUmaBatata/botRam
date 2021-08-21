@@ -43,6 +43,6 @@ module.exports = {
       .setFooter(`Informações sobre: ${member.user.username}`)
       .setTimestamp();
 
-    message.channel.send({ embeds: [embed] });
+    message.reply({ embeds: [embed] });
   }
 };

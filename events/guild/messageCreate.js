@@ -50,7 +50,7 @@ module.exports = async (bot, message) => {
   if (command) {
     command.run(bot, message, args);
     const ebd = new Discord.MessageEmbed()//criando uma embed
-      .setDescription(`\`${message.author.username}\` executou \`${cmd}\` em \`${message.guild.name}\``)
+      .setDescription(`\`${message.author.username}#${message.author.discriminator}\` executou \`${cmd}\` em \`${message.guild.name}\``)
       .setFooter(`Executado dia `)
       .setTimestamp()
     bot.channels.cache.get("878417697233338418").send({embeds: [ebd]})
