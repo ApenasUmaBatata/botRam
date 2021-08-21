@@ -22,7 +22,6 @@ module.exports = async (bot, message) => {
  //------------------------------------
 
   let prefix = config.prefix; //puxando prefixo do bot
-
   //se o bot for marcado @Ram ou a palavra Ram for escrita ela respondera com uma mensagem
   if (message.content === "Ram" || message.content === "<@!705547264537657465>") {
     let bicon = bot.user.displayAvatarURL();
@@ -50,6 +49,11 @@ module.exports = async (bot, message) => {
   let command = bot.commands.get(cmd) || bot.commands.get(bot.aliases.get(cmd));
   if (command) {
     command.run(bot, message, args);
+    const ebd = new Discord.MessageEmbed()//criando uma embed
+      .setDescription(`\`${message.author.username}\` executou \`${cmd}\` em \`${message.guild.name}\``)
+      .setFooter(`Executado dia `)
+      .setTimestamp()
+    bot.channels.cache.get("878417697233338418").send({embeds: [ebd]})
   } else {
     message.channel.send(`${fras}`);
   }

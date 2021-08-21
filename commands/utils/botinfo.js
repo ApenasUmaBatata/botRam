@@ -39,7 +39,7 @@ module.exports = {
       .setThumbnail(bicon)
       .setImage('https://i.imgur.com/t8s41Lu.png')
       .setDescription("`Algumas informações sobre mim!`")
-      .addField(`Informações gerais`, `\`Me chamo ${bot.user.username}, fui criada pelo SrBatata#1001\``)
+      .addField(`Informações gerais`, `\`Me chamo ${bot.user.username}, fui codificada por SrBatata#1001\``)
       .addField(`Informações adicionais`, `\`Atualmente tenho ${bot.commands.size} comandos, estou acordada á ${uptime}, me encontro em ${bot.guilds.cache.size} servidores\``)
       .addField(`Me convide`, `[Clicando aqui!](https://discord.com/api/oauth2/authorize?client_id=705547264537657465&permissions=8&scope=bot)`)
     //.addField(`__**Vote em mim**__`, `[Top.gg](https://top.gg/bot/705547264537657465)`);
