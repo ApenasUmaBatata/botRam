@@ -4,7 +4,7 @@ const config = require("../../config.json");
 module.exports = {
   config: {
     name: "ajuda",
-    aliases: ["help"],
+    aliases: ["help", "a"],
   },
   run: async (bot, message, args) => {
     const pref = config.prefix

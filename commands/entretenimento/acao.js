@@ -16,8 +16,7 @@ module.exports = {
           .setImage('https://data.whicdn.com/images/287575135/original.gif')
           .setFooter(`Digite ' ${pref}ação <CommandName> <Menção>' ocorra uma ação!`, message.author.displayAvatarURL())
           .setColor("#ff00c3");
-      message.delete();
-      message.channel.send({ embeds: [embed] });
+      message.reply({ embeds: [embed] });
     }//Mencione alguém para que ocorra uma ação!
     if (!message.mentions.users.first())//puxano a menção do autor
         return message.channel.send("Mencione alguém para que ocorra uma ação!")
@@ -44,8 +43,7 @@ module.exports = {
         .setDescription(`${message.author} ${fr} ${message.mentions.users.first()}`)
       const embed2 = new Discord.MessageEmbed() //criando uma embed
         .setImage(`${img}`)
-      message.delete();
-      message.channel.send({ embeds: [embed, embed2] }); //enviando a embed
+      message.reply({ embeds: [embed, embed2] }); //enviando a embed
     }
     if (args[0]  == "tapa" ){
       var image = [
@@ -64,8 +62,7 @@ module.exports = {
         .setDescription(`${message.author} ${fr} ${message.mentions.users.first()}`)
       const embed2 = new Discord.MessageEmbed() //criando uma embed
         .setImage(`${img}`)
-      message.delete();
-      message.channel.send({ embeds: [embed, embed2] }); //enviando a embed
+      message.reply({ embeds: [embed, embed2] }); //enviando a embed
     }
     }
 }

@@ -3,7 +3,7 @@ const Discord = require("discord.js");
 module.exports = {
     config: {
       name: "sugestão",
-      aliases: ["sugest", "su"]
+      aliases: ["sugest", "su","sugestao"]
     },
     run: async (bot, message, args) => {
 
