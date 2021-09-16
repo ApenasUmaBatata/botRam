@@ -13,10 +13,13 @@ Pequenas informações sobre o bot!
 
 ---
 
+### Descrição
+teste
+
 ---
 
-## descricao
-teste
+### Author info
+- Twitter - [@PedreHnrique](https://twitter.com/PedreHnrique)
 
 ---
 
