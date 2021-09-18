@@ -1,0 +1,28 @@
+{
+    "modouso": {
+        "pt": {
+            "expulsar": "expulsar [@pessoa] [motivo]",
+            "limpar": "limpar [quantidade, {max 100 mensagens}]",
+            "ajuda": "ajuda [CommandName]",
+            "enquete": "enquete [#canal] [mensagem] e/ou enquete [mensagem]",
+            "filme": "filme [filme 1] [filme 2] [filme 3] [filme 4]",
+            "falar": "say [#canal] [mensagem] e/ou say [mensagem]",
+            "sorteio": "sorteio [tempo m/h/d] [canal] [item]",
+            "userinfo": "userinfo [@pessoa] e/ou userinfo (para mostrar apenas informações suas)",
+            "ação": "ação [nome da ação] [@pessoa]",
+            "calculo": "calculo [Numero] [variavel do calculo +/-/x/'/'] [Numero]",
+            "jokenpo": "jokenpo [pedra/papel/tesoura]"
+        },
+        "en": {
+            "help": "help [CommandName]"
+        }
+    },
+    "ajuda": {
+        "pt": {
+
+        },
+        "en": {
+
+        }
+    }
+}

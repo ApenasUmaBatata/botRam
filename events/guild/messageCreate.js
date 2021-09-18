@@ -1,10 +1,9 @@
-const Discord = require("discord.js");
-const config = require("../../config.json");
+const {MessageEmbed} = require("discord.js");
+const {prefix} = require("../../arquivosjson/config.json");
 
 module.exports = async (bot, message, args) => {
 // se o author for bot ou a mensagem for DM o bot nao responderá
-  if (message.author.bot) return;
-  if (message.channel.type === "dm") return;
+if (message.author.bot || !message.guild || !message.content.startsWith(prefix)) return;
 
   //caso o membro escreva Bom dia/tarde/noite no chat o bot irá responder------------
   if (message.content.toLowerCase() == 'bom dia') {
@@ -22,11 +21,10 @@ module.exports = async (bot, message, args) => {
 
  //------------------------------------
 
-  let prefix = config.prefix; //puxando prefixo do bot
   //se o bot for marcado @Ram ou a palavra Ram for escrita ela respondera com uma mensagem
   if (message.mentions.has(bot.user.id) || message.content == "Ram") {
     let bicon = bot.user.avatarURL();
-    const embed = new Discord.MessageEmbed()//criando uma embed
+    const embed = new MessageEmbed()//criando uma embed
       .setAuthor(`Você está perdido? Estou aqui para te ajudar!`, bicon)
       .setFooter(message.author.username, message.author.avatarURL())
       .setColor("#9F7DD3")
@@ -42,21 +40,19 @@ module.exports = async (bot, message, args) => {
   let fras = frases[Math.floor(Math.random() * frases.length)]
 
   //puxando o prefixo para quando uma mensagem for mandada com ele e com comando existente, o bot irá esponder a menssagem com o comando
-  var args = message.content.substring(config.prefix.length).split(" ");
-  if (!message.content.startsWith(config.prefix)) return;
+  var args = message.content.substring(prefix.length).split(" ");
   let cmd = args.shift().toLowerCase();
-  if (!message.content.startsWith(prefix) || message.author.bot) return;
   let command = bot.commands.get(cmd) || bot.commands.get(bot.aliases.get(cmd));
   if (command) {
     command.run(bot, message, args);
-    const ebd = new Discord.MessageEmbed()//criando uma embed
+    const ebd = new MessageEmbed()//criando uma embed
       .setDescription(`\`${message.author.username}#${message.author.discriminator}\` executou \`${cmd}\` em \`${message.guild.name}\``)
       .setFooter(`Executado dia `)
       .setTimestamp()
     bot.channels.cache.get("878417697233338418").send({embeds: [ebd]}) //enviando uma embed no canal setado sempre que um comando for executado
     /**const random = Math.floor(Math.random() * (10 - 1) + 1); // Um sistema randômico
     if (random === 2) {
-      embd = new Discord.MessageEmbed()
+      embd = new MessageEmbed()
           .setDescription(`só um teste`)
       message.reply({ embeds: [embd] });
     }**/

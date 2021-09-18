@@ -1,14 +1,13 @@
-const Discord = require("discord.js");
-const config = require("../../config.json");
+const {MessageEmbed} = require("discord.js");
+const {prefix} = require("../../arquivosjson/config.json");
 
 module.exports = async (bot, guild, message) => {
 
-    const prefix = config.prefix
     bot.users.fetch(guild.ownerId, false).then(user => {
         user.send(`Obrigado por me convidar para ${guild.name}. \n Utilize ${prefix}ajuda para ver meus comandos!`)
     })
 //------------------------------------------------------------------
-    const embed = new Discord.MessageEmbed()
+    const embed = new MessageEmbed()
         .setColor("RANDOM")
         .setDescription(`Fui adicionada em \`${guild.name}\``)
         .setColor("RANDOM")
