@@ -4,7 +4,7 @@ const { modouso } = require("../../../arquivosjson/importantes.json");
 
 module.exports = {
   config: {
-    name: "moduso",
+    name: "modouso",
     aliases: ["uso"]
   },
   run: async (bot, message, args) => {
@@ -13,7 +13,7 @@ module.exports = {
         .setAuthor('Sua ajuda chegou', bot.user.avatarURL())
         .addField(`Administração`, `\`limpar\`,\`expulsar\``)
         .addField(`Comandos gerais`, `\`ajuda\`,\`enquete\`,\`filme\`,\`falar\`,\`sorteio\`,\`usuario\``)
-        .addField(`Entretenimento`, `\`ação\`,\`calculo\`,\`d6\`,\`d20\`,\`rps\``)
+        .addField(`Entretenimento`, `\`ação\`,\`calculo\`,\`d6\`,\`d20\`,\`jokenpo\``)
         .setImage('https://data.whicdn.com/images/287575135/original.gif')
         .setFooter(`Digite ' ${prefix}modouso <CommandName>' para detalhes do comando!`, message.author.avatarURL())
         .setColor("#ff00c3");

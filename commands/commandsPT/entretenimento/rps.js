@@ -3,8 +3,7 @@ const modouso = require(`../../../arquivosjson/importantes.json`)
 
 module.exports = {
     config: {
-        name: "ppt",
-        aliases: ["jokenpo", "rps"],
+        name: "jokenpo",
     },
     run: async (bot, message, args) => {
         //se a pessoa deixar o argumento 0 em branco a seguinte mensagem será enviada

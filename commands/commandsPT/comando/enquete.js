@@ -2,8 +2,7 @@ const { MessageEmbed } = require("discord.js");
 
 module.exports = {
   config: {
-    name: "enquete",
-    aliases: ["Enquete"]
+    name: "enquete"
   },
   run: async (bot, message, args) => {
     if (!message.member.permissions.has(["ADMINISTRATOR"])) {

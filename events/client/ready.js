@@ -1,5 +1,5 @@
 module.exports = async bot => {
-  console.log(`Bot acordou em ${bot.guilds.cache.size} servidores e em ${bot.channels.cache.size} canais.`);  
+  console.log(`Bot acordou em ${bot.guilds.cache.size} servidores com ${bot.channels.cache.size} canais.`);  
   
   let statuses = [
     { name: "Re:Zero-Starting Life in Another World", type: "WATCHING" },

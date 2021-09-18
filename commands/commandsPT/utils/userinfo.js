@@ -1,8 +1,8 @@
 const { MessageEmbed } = require("discord.js");
 module.exports = {
   config: {
-    name: "userinfo",
-    aliases: ["membroinfo", "memberinfo", "user", "usuario", "membro"]
+    name: "usuario",
+    aliases: ["membro"]
   },
   run: async (bot, message, args) => {
     //await message.react("✅");

@@ -1,7 +1,6 @@
 module.exports = {
   config: {
-    name: "say",
-    aliases: ["acc", "announcement", "falar"]
+    name: "falar"
   },
   run: async (bot, message, args) => {
     if (!message.member.permissions.has(["ADMINISTRATOR"])) {

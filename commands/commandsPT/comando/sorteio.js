@@ -3,8 +3,7 @@ const ms = require("ms");
 
 module.exports = {
   config: {
-    name: "give",
-    aliases: ["giveaway", "sorteio"]
+    name: "sorteio",
   },
   run: async (bot, message, args) => {
     //await message.react("✅");

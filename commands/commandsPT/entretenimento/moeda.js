@@ -1,7 +1,6 @@
 module.exports = {
   config: {
-    name: "flip",
-    aliases: ["moeda"]
+    name: "moeda",
   },
   run: async (bot, message, args) => {
     //await message.react("✅");

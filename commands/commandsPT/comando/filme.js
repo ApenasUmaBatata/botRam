@@ -1,8 +1,7 @@
 const { MessageEmbed } = require("discord.js");
 module.exports = {
   config: {
-    name: "sfilme",
-    aliases: ["sjogo", "jogo", "filme"]
+    name: "filme",
   },
   run: async (bot, message, args) => {
     let bicon = bot.user.displayAvatarURL(); //puxando a foto de perfil do bot

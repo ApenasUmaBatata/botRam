@@ -2,8 +2,7 @@ const diciojs = require('dicionario.js')
 
 module.exports = {
   config: {
-    name: "piada",
-    aliases: [""]
+    name: "piada"
   },
   run: async (bot, message, args) => {
     const piada = diciojs.piada()

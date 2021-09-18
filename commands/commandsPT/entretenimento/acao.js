@@ -3,8 +3,7 @@ const { prefix } = require("../../../arquivosjson/config.json");
 
 module.exports = {
   config: {
-    name: "ação",
-    aliases: [""],
+    name: "ação"
   },
   run: async (bot, message, args) => {
     if (!args[0]) {

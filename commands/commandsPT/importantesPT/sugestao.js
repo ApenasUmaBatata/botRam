@@ -3,7 +3,7 @@ const {MessageEmbed} = require("discord.js");
 module.exports = {
     config: {
       name: "sugestão",
-      aliases: ["sugest", "su","sugestao"]
+      aliases: ["sugestao"]
     },
     run: async (bot, message, args) => {
 

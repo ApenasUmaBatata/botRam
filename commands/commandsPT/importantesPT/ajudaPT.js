@@ -13,8 +13,8 @@ module.exports = {
         .setAuthor('Sua ajuda chegou', bot.user.avatarURL())
         .addField(`Importantes`, `\`ajuda\`,\`modouso\``, inline = true)
         .addField(`Administração`, `\`limpar\`,\`expulsar\``, inline = true)
-        .addField(`Comandos gerais`, `\`botinfo\`,\`enquete\`,\`filme\`,\`falar\`,\`sorteio\`,\`svinfo\`,\`userinfo\``)
-        .addField(`Entretenimento`, `\`ação\`,\`calculo\`,\`d6\`,\`d20\`,\`flip\`,\`rps\``)
+        .addField(`Comandos gerais`, `\`botinfo\`,\`enquete\`,\`filme\`,\`falar\`,\`sorteio\`,\`svinfo\`,\`membro\``)
+        .addField(`Entretenimento`, `\`ação\`,\`calculo\`,\`d6\`,\`d20\`,\`moeda\`,\`jokenpo\``)
         .setImage('https://data.whicdn.com/images/287575135/original.gif')
         .setFooter(`Digite ' ${prefix}ajuda <CommandName>' para detalhes do comando!`, message.author.avatarURL())
         .setColor("#ff00c3");
@@ -32,7 +32,7 @@ module.exports = {
 
       message.reply("```O comando mostra a forma correta de usar os demais comandos!```")
     }
-    if (args[0] == "kick") {
+    if (args[0] == "expulsar") {
 
       message.reply("```O bot irá expulsar a pessoa mencionada!```")
     }
@@ -52,7 +52,7 @@ module.exports = {
 
       message.reply("```Abre uma votação para filme, com até 4 opções!```")
     }
-    if (args[0] == "say") {
+    if (args[0] == "falar") {
 
       message.reply("```Escreva uma mensagem, e o bot irá mandar ela no chat por você!```")
     }
@@ -64,7 +64,7 @@ module.exports = {
 
       message.reply("```Mostra algumas informações do servidor!```")
     }
-    if (args[0] == "userinfo") {
+    if (args[0] == "membro") {
 
       message.reply("```Mostra algumas informações suas ou de alguém mencionado!```")
     }
@@ -84,7 +84,7 @@ module.exports = {
 
       message.reply("```Rola um dado de 20 lados!(vai passar por remodelação)```")
     }
-    if (args[0] == "flip") {
+    if (args[0] == "moeda") {
 
       message.reply("```Taca uma moeda para o alto!(vai passar por remodelação)```")
     }
@@ -92,7 +92,7 @@ module.exports = {
 
       message.reply("```Conta uma piada para você!(vai passar por remodelação)```")
     }
-    if (args[0] == "ppt") {
+    if (args[0] == "jokenpo") {
 
       message.reply("```Brinca de pedra, papel ou tesoura com o bot!```")
     }
