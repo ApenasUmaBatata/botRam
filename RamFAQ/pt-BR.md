@@ -23,7 +23,7 @@ O bot consta com comandos de moderação, entretenimento e em breve tenho planos
 ### Sobre
 - Twitter - [@PedreHnrique](https://twitter.com/PedreHnrique)
 - Discord - [SrBatata#1001](https://discords.com/bio/p/SrBatata)
-- <a href="mailto:ConnectWith@laxmena.com">![ConnectWith@laxmena.com](https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white)</a>
+<a href="mailto:pedrohmendess007@gmail.com">![pedrohmendess007@gmail.com](https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white)</a>
 
 ---
 
