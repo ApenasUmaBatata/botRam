@@ -19,7 +19,7 @@ module.exports = async (bot, message, args) => {
  //------------------------------------
 
   //se o bot for marcado @Ram ou a palavra Ram for escrita ela respondera com uma mensagem
-  if (message.mentions.has(bot.user.id) || message.content.includes("Ram")) {
+  if (message.mentions.has(bot.user.id)) {
     const embed = new MessageEmbed()//criando uma embed
       .setAuthor(`Você está perdido? Estou aqui para te ajudar!`, bot.user.avatarURL())
       .setFooter(message.author.username, message.author.avatarURL())
