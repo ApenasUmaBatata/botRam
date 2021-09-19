@@ -1,8 +1,7 @@
 const { MessageEmbed } = require("discord.js");
 module.exports = {
   config: {
-    name: "cargo",
-    aliases: [""]
+    name: "cargo"
   },
   run: async (bot, message, args) => {
     let choices = [

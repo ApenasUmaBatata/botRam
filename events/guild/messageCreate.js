@@ -2,9 +2,6 @@ const {MessageEmbed} = require("discord.js");
 const {prefix} = require("../../arquivosjson/config.json");
 
 module.exports = async (bot, message, args) => {
-// se o author for bot ou a mensagem for DM o bot nao responderá
-if (message.author.bot || !message.guild || !message.content.startsWith(prefix)) return;
-
   //caso o membro escreva Bom dia/tarde/noite no chat o bot irá responder------------
   if (message.content.toLowerCase() == 'bom dia') {
     const aut = message.author;
@@ -22,10 +19,9 @@ if (message.author.bot || !message.guild || !message.content.startsWith(prefix))
  //------------------------------------
 
   //se o bot for marcado @Ram ou a palavra Ram for escrita ela respondera com uma mensagem
-  if (message.mentions.has(bot.user.id) || message.content == "Ram") {
-    let bicon = bot.user.avatarURL();
+  if (message.mentions.has(bot.user.id) || message.content.includes("Ram")) {
     const embed = new MessageEmbed()//criando uma embed
-      .setAuthor(`Você está perdido? Estou aqui para te ajudar!`, bicon)
+      .setAuthor(`Você está perdido? Estou aqui para te ajudar!`, bot.user.avatarURL())
       .setFooter(message.author.username, message.author.avatarURL())
       .setColor("#9F7DD3")
       .setDescription(`Olá jovem guerreiro, estava em minha caminhada matinal e escutei por seus gritos, se estiver perdido use \`${prefix}ajuda\`. Lembrando, uma viagem pode ser muito perigosa se você estiver sozinho!`);
@@ -42,6 +38,7 @@ if (message.author.bot || !message.guild || !message.content.startsWith(prefix))
   //puxando o prefixo para quando uma mensagem for mandada com ele e com comando existente, o bot irá esponder a menssagem com o comando
   var args = message.content.substring(prefix.length).split(" ");
   let cmd = args.shift().toLowerCase();
+  if (message.author.bot || !message.guild || !message.content.startsWith(prefix)) return; // se o author for bot ou a mensagem for DM o bot nao responderá
   let command = bot.commands.get(cmd) || bot.commands.get(bot.aliases.get(cmd));
   if (command) {
     command.run(bot, message, args);
