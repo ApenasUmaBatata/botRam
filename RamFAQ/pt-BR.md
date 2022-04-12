@@ -22,7 +22,7 @@ O bot consta com comandos de moderação, entretenimento e em breve tenho planos
 
 ### Sobre
 - Twitter - [@PedreHnrique](https://twitter.com/PedreHnrique)
-- Discord - [SrBatata#1001](https://discords.com/bio/p/SrBatata)
+- Discord - SrBatata#1001 //](https://discords.com/bio/p/SrBatata)
 - Gmail - pedrohmendess007@gmail.com
 
 ---
