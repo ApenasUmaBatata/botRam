@@ -16,7 +16,7 @@ Pequenas informações sobre o bot!
 
 ### Descrição
 Um pequeno bot que estou desenvolvendo durante a pandemia, devido ao tédio decidi fazer algo, e assim surgiu a idéia do bot, com inspiração no anime Re:Zero Kara Hajimeru Isekai Seikatsu.
-O bot consta com comandos de moderação, entretenimento e em breve tenho planos para desenvolver comandos de economia!
+O bot consta com comandos de moderação, entretenimento e em breve há planos envolvendo sistema de economia!
 
 ---
 
