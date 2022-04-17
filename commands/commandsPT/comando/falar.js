@@ -1,6 +1,6 @@
 module.exports = {
   config: {
-    name: "falar"
+    name: "falar",
   },
   run: async (bot, message, args) => {
     if (!message.member.permissions.has(["ADMINISTRATOR"])) {
@@ -17,5 +17,5 @@ module.exports = {
       message.channel.send(`${message.author} disse -> ${argsresult}`); //se a pessoa nao tiver selecionado um canal, a mensagem sera enviada no canal que o autor escreveu
     }
     message.delete();
-  }
+  },
 };

@@ -1,11 +1,13 @@
-const diciojs = require('dicionario.js')
+const diciojs = require("dicionario.js");
 
 module.exports = {
   config: {
-    name: "piada"
+    name: "piada",
   },
   run: async (bot, message, args) => {
-    const piada = diciojs.piada()
-    message.reply(`**Q:** ${piada.properties.pergunta}\n**R:** ${piada.properties.resposta}`)
-  }
-}
+    const piada = diciojs.piada();
+    message.reply(
+      `**Q:** ${piada.properties.pergunta}\n**R:** ${piada.properties.resposta}`
+    );
+  },
+};
