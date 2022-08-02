@@ -2,6 +2,12 @@ const {MessageEmbed} = require("discord.js");
 const {prefix} = require("../../arquivosjson/config.json");
 
 module.exports = async (bot, message, args) => {
+// let statuses = ["oi","oii","oiii"];
+// setInterval(function() {
+//   let status = statuses[Math.floor(Math.random() * statuses.length)];
+//   bot.channels.cache.get("878417697233338418").send(status);
+// }, 10000);
+
   //caso o membro escreva Bom dia/tarde/noite no chat o bot irá responder------------
   if (message.content.toLowerCase() == 'bom dia') {
     const aut = message.author;

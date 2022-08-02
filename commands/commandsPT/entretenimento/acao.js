@@ -4,6 +4,7 @@ const { prefix } = require("../../../arquivosjson/config.json");
 module.exports = {
   config: {
     name: "ação",
+    aliases: ["acao"],
   },
   run: async (bot, message, args) => {
     if (!args[0]) {
@@ -40,8 +41,8 @@ module.exports = {
           "abraçou",
           "deu um abraço em",
         ];
-        let img = image[Math.floor(Math.random() * image.length)];
-        let fr = fra[Math.floor(Math.random() * fra.length)]; //randomizando a variael de gifs para que caia um aleatorio cada vez que o comando for usado
+        let img = image[Math.floor(Math.random() * image.length)]; //randomizando a variael de gifs para que caia um aleatorio cada vez que o comando for usado
+        let fr = fra[Math.floor(Math.random() * fra.length)]; //randomizando a variael de frases para que caia um aleatorio cada vez que o comando for usado
         const embed = new MessageEmbed() //criando uma embed
           .setDescription(
             `${message.author} ${fr} ${message.mentions.members.first()}`

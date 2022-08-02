@@ -1,28 +1,34 @@
-# pt-BR
-Atualmente o bot está passando por uma repaginação, muitos comandos estão sendo refeitos na versão pt-BR e iniciei a tradução dos comandos para en-US, como não sou bilingue, peço ajuda para que haja uma experiência agradável para todos os usuários!
-- [Contatos](#sobre)
-- [Convide o bot para seu servidor](https://discord.com/api/oauth2/authorize?client_id=705547264537657465&permissions=8&scope=bot%20applications.commands)
+# Sobre a Ram
 
----
+### Sumário
 
-### Informações
-Pequenas informações sobre o bot!
-
-- [Descrição](#descrição)
+- [Ram](#O-que-eu-sou)
 - [Comandos](#comandos-pt-br)
-- [Sobre](#sobre)
+- [Contatos criador](#Criador)
 
 ---
 
-### Descrição
-Um pequeno bot que estou desenvolvendo durante a pandemia, devido ao tédio decidi fazer algo, e assim surgiu a idéia do bot, com inspiração no anime Re:Zero Kara Hajimeru Isekai Seikatsu.
-O bot consta com comandos de moderação, entretenimento e em breve há planos envolvendo sistemas de economia!
+### O que eu sou?
+
+Sou um pequeno bot que ainda estou em desenvolvimento, toda minha temática tem como inspiração o anime Re:Zero Kara Hajimeru Isekai Seikatsu.
+
+Atualmente eu estou com comandos de moderação e entretenimento, logo em breve há planos para que eu possa me tornar melhor, com o desenvolvimento de novos sistemas como:
+
+- Economia
+- Dungeons & Dragons
+- Eventos automáticos!
+
+_Atualmente eu estou passando por uma repaginação, muitos de meus comandos estão sendo refeitos na versão pt-BR e iniciei a tradução de alguns comandos para en-US!_
+
+- [Me convide para seu servidor](https://discord.com/api/oauth2/authorize?client_id=705547264537657465&permissions=8&scope=bot%20applications.commands)
 
 ---
 
-### Sobre
-- Twitter - [@PedreHnrique](https://twitter.com/PedreHnrique)
-- Discord - [SrBatata#2449](https://discord.gg/rafa7XjTxS)
+### Criador
+
 - Gmail - pedrohmendess007@gmail.com
+- Twitter - [@PedreHnrique](https://twitter.com/PedreHnrique)
+- Discord do criador - SrBatata#2449
+- Grupo de suporte - [Games Are Life](https://discord.gg/rafa7XjTxS)
 
 ---
