@@ -24,5 +24,5 @@ module.exports = bot => {
         pul.config.aliases.forEach(a => bot.aliases.set(a, pul.config.name));
     }
   };
-  ["importantesEN", "administraçãoEN"].forEach(x => loa(x));
+  ["administraçãoEN", "importantesEN"].forEach(x => loa(x));
 };

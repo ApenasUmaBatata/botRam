@@ -1,5 +1,6 @@
 const { MessageEmbed } = require("discord.js"); // puxando a livraria 'discord.js'
 const { prefix } = require("../../../arquivosjson/config.json");
+const { ajuda } = require("../../../arquivosjson/importantes.json");
 
 module.exports = {
   config: {
@@ -35,14 +36,10 @@ module.exports = {
       //message.reply({ embeds: [embed] })
     }
     if (args[0] == "ajuda") {
-      message.reply(
-        "```O comando 'ajuda' lhe mostra todos os comandos disponíveis!```"
-      );
+      message.reply(`\`\`\`${ajuda.pt.ajuda}\`\`\``);
     }
     if (args[0] == "modouso") {
-      message.reply(
-        "```O comando mostra a forma correta de usar os demais comandos!```"
-      );
+      message.reply(`\`\`\`${ajuda.pt.modouso}\`\`\``);
     }
     if (args[0] == "expulsar") {
       message.reply("```O bot irá expulsar a pessoa mencionada!```");

@@ -18,6 +18,8 @@
     },
     "ajuda": {
         "pt": {
+            "ajuda": "O comando 'ajuda' lhe mostra todos os comandos disponíveis!",
+            "modouso": "O comando mostra a forma correta de usar os demais comandos!"
 
         },
         "en": {

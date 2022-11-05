@@ -12,19 +12,10 @@ module.exports = {
       embed = new MessageEmbed()
         .setAuthor("Sua ajuda chegou", bot.user.avatarURL())
         .addField(`Administração`, `\`limpar\`,\`expulsar\``)
-        .addField(
-          `Comandos gerais`,
-          `\`ajuda\`,\`enquete\`,\`filme\`,\`falar\`,\`sorteio\`,\`usuario\``
-        )
-        .addField(
-          `Entretenimento`,
-          `\`ação\`,\`calculo\`,\`d6\`,\`d20\`,\`jokenpo\``
-        )
+        .addField(`Comandos gerais`,`\`ajuda\`,\`enquete\`,\`filme\`,\`falar\`,\`sorteio\`,\`usuario\``)
+        .addField(`Entretenimento`,`\`ação\`,\`calculo\`,\`d6\`,\`d20\`,\`jokenpo\``)
         .setImage("https://data.whicdn.com/images/287575135/original.gif")
-        .setFooter(
-          `Digite ' ${prefix}modouso <CommandName>' para detalhes do comando!`,
-          message.author.avatarURL()
-        )
+        .setFooter(`Digite '${prefix}modouso <CommandName>' para detalhes do comando!`,message.author.avatarURL())
         .setColor("#ff00c3");
       message.reply({ embeds: [embed] });
     }
