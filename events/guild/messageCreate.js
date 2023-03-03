@@ -1,5 +1,6 @@
-const {MessageEmbed} = require("discord.js");
-const {prefix} = require("../../arquivosjson/config.json");
+const {MessageEmbed} = require("discord.js")
+const {prefix} = require("../../arquivosjson/config.json")
+const {fala} = require("../../arquivosjson/falas.json")
 
 module.exports = async (bot, message, args) => {
 // let statuses = ["oi","oii","oiii"];
@@ -9,17 +10,19 @@ module.exports = async (bot, message, args) => {
 // }, 10000);
 
   //caso o membro escreva Bom dia/tarde/noite no chat o bot irá responder------------
-  if (message.content.toLowerCase() == 'bom dia') {
-    const aut = message.author;
-  message.reply(`Bom dia ${aut}`);
-}
-  if (message.content.toLowerCase() == 'boa tarde') {
-    const aut = message.author;
-  message.reply(`Boa tarde ${aut}`);
-}
-  if (message.content.toLowerCase() == 'boa noite') {
-    const aut = message.author;
-  message.reply(`Boa noite ${aut}`);
+  const oi = (message.author)
+  if (message.content == "bom dia") {
+    message.reply(`${fala.bom_dia} ${oi}`);
+  } if (message.content == "boa tarde") {
+    message.reply(`${fala.boa_tarde} ${oi}`);
+  }if (message.content == "boa noite") {
+    message.reply(`${fala.boa_noite} ${oi}`);
+  }if (message.content == "boa madrugada") {
+    message.reply(`${fala.boa_madrugada} ${oi}`);
+  } if (message.content == "quem?") {
+    message.reply(`${fala["quem?"]}`);
+  } if (message.content == "🐳") {
+    message.reply(`olha a sua mãe`);
   }
 
  //------------------------------------
